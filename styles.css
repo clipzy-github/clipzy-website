@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap')
+
+body {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    background-color: #e5ddc7;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 3px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero, .about, .invite, .newsletter, .contact, .donate, .data-processing-addendum {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2c2c2c;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.homeText {
+    background: rgb(255,33,78);
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+.hero p, .about p, .invite p, .newsletter p, .contact p, .donate p, .data-processing-addendum p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.about h2, .invite h2, .newsletter h2, .contact h2, .donate h2, .data-processing-addendum h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn,
+a.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem; 
+  border-radius: 9999px; 
+  background-image: linear-gradient(to bottom, #3b82f6, #2563eb); 
+  color: #ffffff; 
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn:focus,
+a.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #93c5fd; 
+}
+
+.btn:hover,
+a.btn:hover {
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4); 
+}
+
+.btn,
+a.btn {
+  transition-duration: 0.2s; 
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid #ffffff;
+}
+
+.footer-links li a:hover {
+    color: #3498db;
+    border-bottom-color: #3498db;
+}
+
+.donate ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.donate ul li {
+    margin-bottom: 10px;
+}
+
+.donate a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.donate a:hover {
+    color: #2577b5;
+}
+
+.newsletter {
+    margin-bottom: 0;
+}
+
+.invite {
+    margin-bottom: 0;
+}
+
+.team {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+}
+
+.team h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    width: 200px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.team-member h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background: rgb(255,255,255);
+    background: #fffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #ffffff;
+}

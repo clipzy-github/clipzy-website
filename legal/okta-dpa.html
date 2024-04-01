@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Okta Data Processing Addendum</title>
+ <meta charset="utf-8"/>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+ <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body style="margin: 0px">
+ <div id="adobe-dc-view"></div>
+ <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+ <script type="text/javascript">
+    document.addEventListener("adobe_dc_view_sdk.ready", function()
+    {
+        var adobeDCView = new AdobeDC.View({clientId: "c0ed0db88ee3436884c90c657b587099", divId: "adobe-dc-view"});
+        adobeDCView.previewFile(
+       {
+          content:   {location: {url: "https://clipzyapp.com/img/okta-dpa.pdf"}},
+          metaData: {fileName: "Okta Data Processing Addendum.pdf"}
+       });
+    });
+ </script>
+</body>
