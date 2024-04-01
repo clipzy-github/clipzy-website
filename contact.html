@@ -146,87 +146,24 @@
             </div>
         </div>
     </section>
-
-    <!-- Modal for General Support -->
-    <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="supportModalLabel">4</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>4</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Project Manager -->
-    <div class="modal fade" id="managerModal" tabindex="-1" aria-labelledby="managerModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="managerModalLabel">3</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>3</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Head Developer -->
-    <div class="modal fade" id="developerModal" tabindex="-1" aria-labelledby="developerModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="developerModalLabel">2</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>2</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Community Discord Server -->
-    <div class="modal fade" id="discordModal" tabindex="-1" aria-labelledby="discordModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="discordModalLabel">1</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>1" target="_blank">https://discord.gg/pNgcu233ND</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <footer class="footer mt-5 py-3">
         <div class="container">
             <ul class="nav nav-tabs" id="footerTabs">
                 <li class="nav-item">
-                    <a class="nav-link" href="/legal/terms-and-conditions" data-bs-toggle="modal" data-bs-target="#managerModal">Terms And Conditions</a>
+                    <a class="nav-link" href="/legal/terms-and-conditions">Terms And Conditions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/legal/privacy-policy" data-bs-toggle="modal" data-bs-target="#developerModal">Privacy Policy</a>
+                    <a class="nav-link" href="/legal/privacy-policy">Privacy Policy</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/legal/dpa" data-bs-toggle="modal" data-bs-target="#discordModal">DPA</a>
+                    <a class="nav-link" href="/legal/dpa">DPA</a>
                 </li>
             </ul>
             <p>&copy; 2024 Clipzy. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-        // Dynamically set active tab and open corresponding modal on tab click
         document.querySelectorAll('.nav-link').forEach(function(element) {
             element.addEventListener('click', function() {
                 document.querySelectorAll('.nav-link').forEach(function(navItem) {
