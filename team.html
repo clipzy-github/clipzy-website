@@ -1,5 +1,6 @@
 <!-- COPYRIGHT 2024 AUTHORS OF CLIPZY -->
-<!DOCTYPE html> 
+<!--FILE FROM 14:08 PM EST-->
+<!DOCTCLIPZYYPE html> 
 <html lang="en">
 <head>
     <script src="https://js.sentry-cdn.com/1102ca26e4376822920a59c7ffee0ae4.min.js" crossorigin="anonymous"></script>
@@ -104,6 +105,20 @@
                 color: #fff;
             }
         }
+
+        @media (max-width: 576px) {
+            .profile-picture {
+                width: 50px;
+                height: 50px;
+            }
+            .card {
+                margin-bottom: 20px;
+            }
+            .scroll-container {
+                max-height: none;
+                overflow-y: visible;
+            }
+        }
     </style>
 </head>
 <body>
@@ -153,7 +168,7 @@
         <div class="container">
             <h2 class="text-center mb-4 contact-title">Meet the Team</h2>
             <div class="row scroll-container">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="card mb-3">
                         <img class="card-img-top profile-picture" src="img/jose-photo.png" alt="Jose's Photo">
                         <div class="card-body">
@@ -163,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="card mb-3">
                         <img class="card-img-top profile-picture" src="img/owahai-photo.png" alt="OwaHai's Photo">
                         <div class="card-body">
@@ -173,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="card mb-3">
                         <img class="card-img-top profile-picture" src="img/bruve-photo.png" alt="BRuve's Photo">
                         <div class="card-body">
@@ -183,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 hidden">
+                <div class="col-md-4 col-sm-6 hidden">
                     <div class="card mb-3">
                         <img class="card-img-top profile-picture" src="img/new-employee-photo.png" alt="New Employee's Photo">
                         <div class="card-body">
