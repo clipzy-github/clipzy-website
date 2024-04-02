@@ -1,5 +1,5 @@
 <!-- COPYRIGHT 2024 AUTHORS OF CLIPZY -->
-<!--FILE FROM 14:08 EST-->
+<!--FILE FROM 4/2/24 19:24 EST-->
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -143,19 +143,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class='nav-link' href='/'>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class='nav-link' href='/about'>About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class='nav-link' href='/contact'>Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="donate.html">Donate</a>
+                            <a class='nav-link' href='/donate'>Donate</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="team.html">Meet the Team</a>
+                            <a class='nav-link' href='/team'>Meet the Team</a>
                         </li>
                     </ul>
                 </div>
@@ -233,22 +233,27 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function(){
-            var cards = document.querySelectorAll(".card");
             var hiddenCards = document.querySelectorAll(".hidden");
-            var viewMoreLink = document.createElement("a");
-            viewMoreLink.textContent = "View More";
-            viewMoreLink.classList.add("text-decoration-none");
-            viewMoreLink.style.color = "#fff";
-            viewMoreLink.style.cursor = "pointer";
-            viewMoreLink.addEventListener("click", function(){
-                hiddenCards.forEach(function(card, index){
-                    if(index < 3) {
-                        card.classList.remove("hidden");
-                    }
+
+            // THIs BETTER FIX IT
+            if (hiddenCards.length > 0) {
+                var viewMoreLink = document.createElement("a");
+                viewMoreLink.textContent = "View More";
+                viewMoreLink.classList.add("text-decoration-none");
+                viewMoreLink.style.color = "#fff";
+                viewMoreLink.style.cursor = "pointer";
+                viewMoreLink.addEventListener("click", function(){
+                    hiddenCards.forEach(function(card, index){
+                        if(index < 3) {
+                            card.classList.remove("hidden");
+                        }
+                    });
+s
+                    viewMoreLink.style.display = "none";
                 });
-            });
-            var container = document.querySelector(".container");
-            container.appendChild(viewMoreLink);
+                var container = document.querySelector(".container");
+                container.appendChild(viewMoreLink);
+            }
         });
     </script>
 </body>
