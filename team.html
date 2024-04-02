@@ -1,4 +1,5 @@
-<!DOCTYPE htmld> 
+<!-- COPYRIGHT 2024 AUTHORS OF CLIPZY -->
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <script src="https://js.sentry-cdn.com/1102ca26e4376822920a59c7ffee0ae4.min.js" crossorigin="anonymous"></script>
@@ -21,9 +22,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
         
         body {
-            background: linear-gradient(to bottom, #e5ddc7, #aca38d); /* Lighter color on top, black on bottom */
+            background: linear-gradient(to bottom, #e5ddc7, #aca38d);
             color: #fff;
-            font-family: 'Oxygen', sans-serif; /* Use Oxygen font */
+            font-family: 'Oxygen', sans-serif;
             min-height: 100vh;
             position: relative;
         }
@@ -53,7 +54,7 @@
         .card:hover {
             transform: translateY(-5px);
         }
-        .card-title, .modal-title { /* Make card titles and modal titles black */
+        .card-title, .modal-title {
             color: #000000;
         }
         .card-text {
@@ -72,27 +73,36 @@
             color: #ffc107;
         }
         .footer p {
-            color: #fff; /* Setting footer text to white */
+            color: #fff;
         }
         .contact-title {
-            color: #000000; /* Setting Contact Us title to black */
+            color: #000000;
         }
         .profile-picture {
-            width: 70px; /* Adjust size as needed */
-            height: 70px; /* Adjust size as needed */
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             margin-bottom: 10px;
         }
-        
-        /* Additional mobile-friendly styles */
+        .hidden {
+            display: none;
+        }
+        .scroll-container {
+            max-height: 400px;
+            overflow-y: auto;
+            scrollbar-width: none; 
+            -ms-overflow-style: none; 
+        }
+        .scroll-container::-webkit-scrollbar {
+            display: none; 
+        }
         @media (max-width: 768px) {
             .navbar-collapse {
-                background-color: #343a40; /* Dark background color for mobile navbar */
+                background-color: #343a40;
             }
             .nav-link {
-                color: #fff; /* White color for mobile navbar links */
+                color: #fff;
             }
-            /* Add any other mobile-specific styles here */
         }
     </style>
 </head>
@@ -142,7 +152,7 @@
     <section class="contact mt-5">
         <div class="container">
             <h2 class="text-center mb-4 contact-title">Meet the Team</h2>
-            <div class="row">
+            <div class="row scroll-container">
                 <div class="col-md-4">
                     <div class="card mb-3">
                         <img class="card-img-top profile-picture" src="img/jose-photo.png" alt="Jose's Photo">
@@ -153,7 +163,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-3">
                         <img class="card-img-top profile-picture" src="img/owahai-photo.png" alt="OwaHai's Photo">
@@ -174,13 +183,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 hidden">
                     <div class="card mb-3">
-                        <img class="card-img-top profile-picture" src="https://via.placeholder.com/150" alt="Jayden's Image">
+                        <img class="card-img-top profile-picture" src="img/new-employee-photo.png" alt="New Employee's Photo">
                         <div class="card-body">
-                            <h5 class="card-title">Jayden P.</h5>
-                            <p class="card-text">@yesimaguy</p>
-                            <p class="card-text">Moderator</p>
+                            <h5 class="card-title">New Employee Name</h5>
+                            <p class="card-text">@newemployeeusername</p>
+                            <p class="card-text">Job Title</p>
                         </div>
                     </div>
                 </div>
@@ -207,5 +216,26 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var cards = document.querySelectorAll(".card");
+            var hiddenCards = document.querySelectorAll(".hidden");
+            var viewMoreLink = document.createElement("a");
+            viewMoreLink.textContent = "View More";
+            viewMoreLink.classList.add("text-decoration-none");
+            viewMoreLink.style.color = "#fff";
+            viewMoreLink.style.cursor = "pointer";
+            viewMoreLink.addEventListener("click", function(){
+                hiddenCards.forEach(function(card, index){
+                    if(index < 3) {
+                        card.classList.remove("hidden");
+                    }
+                });
+            });
+            var container = document.querySelector(".container");
+            container.appendChild(viewMoreLink);
+        });
+    </script>
 </body>
 </html>
