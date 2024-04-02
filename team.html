@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE htmld> 
 <html lang="en">
 <head>
     <script src="https://js.sentry-cdn.com/1102ca26e4376822920a59c7ffee0ae4.min.js" crossorigin="anonymous"></script>
@@ -83,6 +83,17 @@
             border-radius: 50%;
             margin-bottom: 10px;
         }
+        
+        /* Additional mobile-friendly styles */
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                background-color: #343a40; /* Dark background color for mobile navbar */
+            }
+            .nav-link {
+                color: #fff; /* White color for mobile navbar links */
+            }
+            /* Add any other mobile-specific styles here */
+        }
     </style>
 </head>
 <body>
@@ -108,19 +119,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class='nav-link' href='/'>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class='nav-link' href='/about'>About</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class='nav-link' href='/contact'>Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="donate.html">Donate</a>
+                            <a class='nav-link' href='/donate'>Donate</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="team.html">Meet the Team</a>
+                            <a class='nav-link' href='/team'>Meet the Team</a>
                         </li>
                     </ul>
                 </div>
