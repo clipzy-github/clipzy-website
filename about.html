@@ -2,68 +2,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+    <script>
+        Sentry.onLoad(function() {
+            Sentry.init({
+                tracesSampleRate: 1.0,
+                replaysSessionSampleRate: 0.1,
+                replaysOnErrorSampleRate: 1.0,
+            });
+        });
+    </script>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/index.html">
+            <div class="container-fluid justify-content-end">
+                <a class="navbar-brand" href="#">
                     <img src="img/favicon.ico" alt="Clipzy Logo" width="30" height="30" class="d-inline-block align-top">
                     Clipzy
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class='nav-link' href='/'>
-                                <i class="fas fa-home"></i> Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class='nav-link' href='/about'>
-                                <i class="fas fa-info-circle"></i> About
-                            </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class='nav-link' href='/contact'>
-                                <i class="fas fa-envelope"></i> Contact
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class='nav-link' href='/donate'>
-                                <i class="fas fa-donate"></i> Donate
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class='nav-link' href='/team'>
-                                <i class="fas fa-user-group"></i> Team
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-cogs"></i> Documents
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/legal/terms-and-conditions"><i class="fas fa-file-alt"></i> Terms and Conditions</a></li>
-                                <li><a class="dropdown-item" href="/legal/privacy-policy"><i class="fas fa-user-secret"></i> Privacy Policy</a></li>
-                                <li><a class="dropdown-item" href="/legal/dpa"><i class="fas fa-lock"></i> Data Processing Addendum</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
-            </div>
         </nav>
     </header>
 
     <section class="contact mt-5">
         <div class="container">
+            <h2 class="text-center mb-4 contact-title">We have stoped making this site</h2>
+            <p class="text-center">Due to issues with the original owners of the name, we have bene FORCED to stop making this site for 2 years. We will most likely be back after 2-3 years from 4/3/24. Please join our discord to find out more. When and if we come back, we will be under a new name. We are sorry for this news and we will update you in the discord.</p>
+            <
             <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="about-section">
-                        <h2 class="text-center mb-4">About Clipzy</h2>
-                        <p>Clipzy is a video hosting app designed specifically for editors. 🎬 Our platform is built by a team of 7 developers, animators, legal advisors, beta testers, and more. 🚀 Powered by React with Auth0 integration for secure sign-up, Clipzy aims to revolutionize the way editors share and collaborate on video content. 🌟</p>
-                        <p>Your data will be used to create your own Clipzy account, and automatically sign up to our marketing emails (don't worry we won't bother you, max 1 email/month). 📧 If you would like to be a beta tester, be sure to sign up to the email list on the "Home" tab. ✉️</p>
-                    </div>
+                <div class="col-md-6 col-lg-4 text-center">
+                    <a href="https://discord.gg/pNgcu233ND" class="btn btn-primary btn-lg mb-3 fadeInUp" target="_blank"><i class="fab fa-discord"></i> Join our Discord</a>
                 </div>
             </div>
         </div>
@@ -71,58 +40,12 @@
 
     <footer class="footer mt-5 py-3 fadeInUp">
         <div class="container text-center">
-            <div class="social-icons mt-3">
-                <a href="//www.dmca.com/Protection/Status.aspx?ID=27ecfe07-a49d-4ebe-b594-3273fa019884" title="DMCA.com Protection Status" class="dmca-badge"> <img src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=27ecfe07-a49d-4ebe-b594-3273fa019884" alt="DMCA.com Protection Status" /></a>
-            </div>
-            <p class="mt-4 mb-0">&copy; 2024 Clipzy. All rights reserved. <i class="fas fa-heart"></i></p>
+            <p class="mt-4 mb-0">We are sorry for this!<i class="fas fa-heart"></i></p>
         </div>
     </footer>
-
-    <div class="popup"></div>
-
-    <script>
-        function showPopup(redirectUrl) {
-            const popup = document.querySelector('.popup');
-            popup.innerHTML = 'Redirecting to ' + redirectUrl + ' in ';
-            popup.style.display = 'block';
-            let countdown = 4;
-            const countdownInterval = setInterval(() => {
-                countdown--;
-                popup.innerHTML = 'Redirecting to ' + redirectUrl + ' in ' + countdown;
-                if (countdown === 0) {
-                    clearInterval(countdownInterval);
-                    window.location.href = redirectUrl;
-                }
-            }, 1000);
-            createConfetti();
-        }
-    </script>
-
-    <script>
-        function createConfetti() {
-            const confettiColors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00'];
-            const confettiElements = [];
-
-            for (let i = 0; i < 100; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-                confetti.style.left = Math.random() * window.innerWidth + 'px';
-                confetti.style.top = Math.random() * -500 + 'px';
-                confetti.style.animationDelay = Math.random() * 3 + 's';
-                confettiElements.push(confetti);
-                document.body.appendChild(confetti);
-            }
-
-            setTimeout(() => {
-                confettiElements.forEach(element => {
-                    element.remove();
-                });
-            }, 3000);
-        }
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e26374524b.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
