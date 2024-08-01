@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+body {
+    background: linear-gradient(to bottom, #e5ddc7, #aca38d);
+    color: #333333;
+    font-family: 'Oxygen', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    margin-right: 5px;
+}
+
+.navbar {
+    padding: 1rem 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.nav-item:hover {
+    background-color: #212529 !important;
+}
+
+.nav-link {
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link i {
+    margin-right: 5px;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title, .modal-title {
+    color: #333333;
+}
+
+.card-text {
+    color: #555555;
+}
+
+.footer {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 2rem 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer p {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.contact-title {
+    color: #333333;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.btn {
+    background-color: #ffc107;
+    color: #212529;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ffca2c;
+    color: #212529;
+}
+
+/* Additional Styles for Footer */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons img {
+    width: 120px;
+    height: auto;
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 1rem 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}

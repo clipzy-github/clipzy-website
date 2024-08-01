@@ -1,0 +1,130 @@
+<!-- COPYRIGHT 2024 AUTHORS OF CLIPZY -->
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        Sentry.onLoad(function() {
+            Sentry.init({
+                tracesSampleRate: 1.0,
+                replaysSessionSampleRate: 0.1,
+                replaysOnErrorSampleRate: 1.0,
+            });
+        });
+    </script>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/favicon.ico" alt="Clipzy Logo" width="30" height="30" class="d-inline-block align-top">
+                    Clipzy
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class='nav-link' href='/'>
+                                <i class="fas fa-home"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class='nav-link' href='/about'>
+                                <i class="fas fa-info-circle"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class='nav-link' href='/contact'>
+                                <i class="fas fa-envelope"></i> Contact
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class='nav-link' href='/donate'>
+                                <i class="fas fa-donate"></i> Donate
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class='nav-link' href='/team'>
+                                <i class="fas fa-user-group"></i> Team
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-cogs"></i> Documents
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/legal/terms-and-conditions"><i class="fas fa-file-alt"></i> Terms and Conditions</a></li>
+                                <li><a class="dropdown-item" href="/legal/privacy-policy"><i class="fas fa-user-secret"></i> Privacy Policy</a></li>
+                                <li><a class="dropdown-item" href="/legal/dpa"><i class="fas fa-lock"></i> Data Processing Addendum</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact mt-5">
+        <div class="container">
+            <h2 class="text-center mb-4 contact-title">403 Forbiden. :(</h2>
+            <h2 class="text-center mb-4 contact-title">Choose Who To Fire!!!!!!!</h2>
+            <p style="color:white;">(Or choose kindness and return to the <a href="/">home</a> page.)</p> 
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <img class="card-img-top profile-picture" src="https://via.placeholder.com/150" alt="OUJOmk96h5j">
+                        <div class="card-body">
+                            <h5 class="card-title">Jose Moran Ureana</h5>
+                            <p class="card-text">@coffeel.arkoburger</p>
+                            <p class="card-text">Founder/Head of ALL Development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <img class="card-img-top profile-picture" src="https://clipzyapp.com/img/bruve-photo.png" alt="Could not load image">
+                        <div class="card-body">
+                            <h5 class="card-title">Jaxon Whitehouse</h5>
+                            <p class="card-text">@bruve</p>
+                            <p class="card-text">Frontend Development Lead</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <img class="card-img-top profile-picture" src="https://via.placeholder.com/150" alt="Could not load image">
+                        <div class="card-body">
+                            <h5 class="card-title">Jayden P.</h5>
+                            <p class="card-text">@yesimaguy</p>
+                            <p class="card-text">Moderator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <p>If you think this was a mistake, please contact our support team so we can fix this right away! </p>
+
+    <footer class="footer mt-5 py-3">
+        <div class="container text-center">
+            <ul class="nav nav-tabs" id="footerTabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="/legal/terms-and-conditions">Terms And Conditions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/legal/privacy-policy">Privacy Policy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/legal/dpa">Data Processing Addendum</a>
+                </li>
+            </ul>
+            <br>
+            <p>&copy; 2024 Clipzy. All rights reserved.</p>
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=27ecfe07-a49d-4ebe-b594-3273fa019884" title="DMCA.com Protection Status" class="dmca-badge"> <img src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=27ecfe07-a49d-4ebe-b594-3273fa019884" alt="DMCA.com Protection Status" /></a> <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e26374524b.js" crossorigin="anonymous"></script>
+</body>
+</html>

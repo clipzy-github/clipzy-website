@@ -1,0 +1,19 @@
+{
+  "name": "netlify-random-lib-example",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "serve dist"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "serve": "^14.1.2"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
