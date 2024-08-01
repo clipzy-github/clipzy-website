@@ -1,0 +1,13 @@
+{
+    "name": "simple-chat-site",
+    "version": "1.0.0",
+    "description": "A simple chat site using Node.js and Netlify.",
+    "scripts": {
+      "start": "netlify dev",
+      "build": "echo 'No build necessary'"
+    },
+    "dependencies": {
+      "netlify-lambda": "^2.0.3"
+    }
+  }
+  
