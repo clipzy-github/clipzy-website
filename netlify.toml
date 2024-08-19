@@ -5,11 +5,11 @@
   force = true
 
 [[redirects]]
-  from = "/contracts/contract-1.html"
-  to = "/contracts/contract-1.html"
+  from = "/contracts/contract-1.pdf"
+  to = "/contracts/contract-1.pdf"
   status = 200
 
 [[redirects]]
-  from = "/contracts-2.html"
-  to = "/contracts-2.html"
+  from = "/contracts-2.pdf"
+  to = "/contracts-2.pdf"
   status = 200
