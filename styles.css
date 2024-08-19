@@ -96,6 +96,16 @@ body {
     margin-left: auto;
 }
 
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-6, .col-lg-4 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 .btn {
     background-color: #ffc107;
     color: #212529;
@@ -104,6 +114,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
+    margin: 0.5rem;
 }
 
 .btn:hover {
