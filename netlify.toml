@@ -1,6 +1,15 @@
-[build]
-  command = "npm run build"
-  publish = "dist"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
 
-[build.environment]
-  NODE_VERSION = "14"
+[[redirects]]
+  from = "/contracts/contract-1.html"
+  to = "/contracts/contract-1.html"
+  status = 200
+
+[[redirects]]
+  from = "/contracts-2.html"
+  to = "/contracts-2.html"
+  status = 200
