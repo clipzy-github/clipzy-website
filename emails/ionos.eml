@@ -1,120 +1,138 @@
-Return-path: <noreply@ionos.com>
-Original-recipient: rfc822;jose@josemoranurena.tech
-Received: from p00-icloudmta-smtpin-us-west-1a-100-percent-30 by p66-mailgateway-smtp-55b6fd77d5-k5hkl (mailgateway 2423B55)
-	with SMTP id 459eb628-e180-4f65-905c-75cf69dbd41c 
-	for <jose@josemoranurena.tech>; Sat, 24 Aug 2024 15:44:43 GMT
-X-Apple-MoveToFolder: INBOX 
-X-Apple-Action: MOVE_TO_FOLDER/INBOX
-X-Apple-UUID: 459eb628-e180-4f65-905c-75cf69dbd41c
-Received: from mout-cscorp.1and1.com (mout-cscorp.1and1.com [212.227.15.50])
-	by p00-icloudmta-smtpin-us-west-1a-100-percent-30.p00-icloudmta-smtpin-vip.icloud-mail-production.svc.kube.us-west-1a.k8s.cloud.apple.com (Postfix) with ESMTPS id A9670C02BBF
-	for <jose@josemoranurena.tech>; Sat, 24 Aug 2024 15:44:36 +0000 (UTC)
-X-ICL-Info: GAtbRFYDBVFFSlVFSwQEQgYMWxkXXlNCBhAWSkoBBExHS1FZSQUYV0VZAxNFXlkQEAkKDjhZWQwaCkgUF10WBBFEDxgWX0VMFhYLVwpTCwgaCgM3El9FBxgWFBYWRUQHGxhIAx1TXkIdHAoYRV1ZFwFUBQQbX0QSW0gHGRwBGAEaFEYHDEILDxoMElobQ1UNBwlIRhleUlNbGgkaWFRSXxwWCBgLHlUNGFkLHhwNClFASVZDSQECVltOUEdABRhTQktSQkkEBFVBTFNHOEBZEQEQCBhVAQZPQklLRUkIG1BESkgbF1NXDhEWCxYRXgg=
-X-ICL-Score: 3.3330332342
-Authentication-Results: bimi.icloud.com; bimi=pass header.d=ionos.com header.selector=default policy.authority=pass policy.authority-uri=https://vmc.digicert.com/fcb79591-8667-4684-946b-0087b7b438cb.pem
-BIMI-Location: v=BIMI1; l=https://vmc.digicert.com/fcb79591-8667-4684-946b-0087b7b438cb.svg a=https://vmc.digicert.com/fcb79591-8667-4684-946b-0087b7b438cb.pem
-X-BIMI-Indicator-Hash: h=ywfEGyQuJiuVwHxQGiqZyNnd2+n5TNgyfJcsQeUbxig= a=sha256
-X-ARC-Info: policy=fail; arc=none
-Authentication-Results: arc.icloud.com; arc=none
-Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=ionos.com
-X-DMARC-Policy: v=DMARC1;p=quarantine;sp=quarantine;pct=100;rua=mailto:b40ae375@mxtoolbox.dmarc-report.com,mailto:re+rwqsk359bcx@dmarc.postmarkapp.com;ruf=mailto:b40ae375@forensics.dmarc-report.com;ri=86400;aspf=r;adkim=r;fo=1
-X-DMARC-Info: pass=pass; dmarc-policy=quarantine; s=r1; d=r1; pdomain=ionos.com
-Authentication-Results: dkim-verifier.icloud.com;
-	dkim=pass (1024-bit key) header.d=ionos.com header.i=@ionos.com header.b=aUzh3kDF
-Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of noreply@ionos.com designates 212.227.15.50 as permitted sender) smtp.mailfrom=noreply@ionos.com
-Received-SPF: pass (spf.icloud.com: domain of noreply@ionos.com designates 212.227.15.50 as permitted sender) receiver=spf.icloud.com; client-ip=212.227.15.50; helo=mout-cscorp.1and1.com; envelope-from=noreply@ionos.com
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ionos.com;
-	s=isystem3; t=1724514274;
-	bh=IdhhlLl/NP+sRq7JSVPq6EvJD23ZJsnLAmtqxRVbE1c=;
-	h=X-UI-Sender-Class:Date:From:Reply-To:To:Message-ID:In-Reply-To:
-	 References:Subject:MIME-Version:Content-Type:List-Help:
-	 X-CSA-Complaints:cc:content-transfer-encoding:content-type:date:
-	 from:message-id:mime-version:reply-to:subject:to;
-	b=aUzh3kDFecTBcfgLonnOrvv82dkRGO9V+KRCserOcJ5Evi82dKV+LZEc0UjsvBcm
-	 SOUscX8n8NMK6AvSTx1Nt5q7dup2y3KY2t+Pctq643Tb7Z1nH5HjmsRTnIPMhx6tZ
-	 Ju+TC+LFXxh/bVqE48as2gRz2HcpjLtmtbYY4saZqc=
-X-UI-Sender-Class: c5d93c19-e31e-4e7c-aa29-b670d90a5741
-Received: from postino-10-70-218-213.localdomain ([18.194.245.84]) by
- mrs-cscorp.1and1.com (mrscorp004 [212.227.15.169]) with ESMTPSA (Nemesis) id
- 0MbbOf-1sR2LX3Bwb-00K22j for <jose@josemoranurena.tech>; Sat, 24 Aug 2024
- 17:44:34 +0200
-Date: Sat, 24 Aug 2024 15:44:34 +0000 (UTC)
-From: IONOS Support <noreply@ionos.com>
-Reply-To: noreply@ionos.com
-To: jose@josemoranurena.tech
-Message-ID: <350041144.76085.1724514274550@postino-10-70-218-213.localdomain>
-In-Reply-To: <34F6CCC7-D16F-4AD0-9747-07F9DFF7E1FE@josemoranurena.tech>
-References: <3C1795A3-FA85-4B1E-B1A1-1ADD146E72B8@josemoranurena.tech> <1146849147.17980.1724513666615@postino-10-70-248-62.localdomain> <34F6CCC7-D16F-4AD0-9747-07F9DFF7E1FE@josemoranurena.tech>
+From: jose@josemoranurena.tech
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_EEEEDB88-29B3-49E6-AFD3-DC48A69D0D8B"
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3807.100.34.1.2\))
 Subject: Re: clipzyapp.com Domain Compromise
-MIME-Version: 1.0
-Content-Type: multipart/mixed; 
-	boundary="----=_Part_76084_271867650.1724514274545"
-Auto-Submitted: auto-replied
-List-Help: <https://home.1und1.de/datenschutz/csa-34001818>
-X-CSA-Complaints: csa-complaints@eco.de
-X-Provags-ID: V03:K1:2/a+1gjjQNQoeky7/MlRwbEeUbCE7/oQH/mbkSRkgRTOKMMXoCD
- jeY+WCRhcLXnIPzaapU02lttBWuMGVLAnWrmIMDZtBfBRBiZMOP3/RiI2Duw5KCSj8iOhBn
- CsU1JOhJuolQCZNoF2G1ng5q8moY6dbAgL80meuF2NXt6JDpPuQBGs8SphrzkpUNn5LJrTJ
- uNImOx7I7SBjBonWYlvqA==
-X-CLX-Shades: None
-X-MANTSH: 1TFkXGBkRCllEF3pgfWRiZB5pGE1kEQpZTRdkRURPEQpZSRcacRoQGncGGB1xHB4
- QGR53BgceBhoRClleF2xseREKQ04XQH9mXBlQZkBQTWJuE2NrT0YTeGgTeG9haUJnQhp5ElsRC
- lhcFxkEGgQfGgUbGgQbHB8EGBgEGB8aEBseGh8aEQpeWRdOBRx5aBEKTVwXGxgfEQpMWhdpaGt
- CTV0RCk1OF2gRCkxGF2NiTWsRCkNaFxgbGAQYGB0EGx8EHxoRCkJeFxsRCkJGF2tzXxJOQE8cR
- XJgEQpCRxdkbXpuZUxcSBJ7XREKQlwXGxEKXk4XGxEKQksXel5obkhYc2ZQZlkRCkJJF3peaG5
- IWHNmUGZZEQpCRRdoTxtES0ZrHhx4BREKQk4Xel5obkhYc2ZQZlkRCkJMF2dMHX18SWFuREMTE
- QpCbBd6QlpGR1ocYWFDWREKQkAXemJwGlxjHHxOXk8RCkJYF2wTSEgBZxlmZXtjEQpNXhcbEQp
- aWBcZEQpwZxdjX0ZmGgFfYH8dThAHHhIRCnBoF2xoRUVYQnJHcn9tEBoRCnBoF2lZHH1EGGZTE
- 1BLEBoRCnBoF2FsQmNwUB5beHpJEBoRCnBoF2VQbVtkYFp9T0t7EBoRCnBoF2cdRh95G0FDaFt
- lEBoRCnBoF2lzG31uXm5YRXgZEBoRCnBoF2dnemNGYEIeaV96EAcZGhEKcGgXYEBFcmJfQWhrW
- FAQGhEKcH8XYV9MQXt5QgFcTG8QBxgeEQpwXxdiSF15WAVwWGJ/QxAHGRoRCnB9F2JIXXlYBXB
- YYn9DEAcZGhEKcF8XbXlGBV5QTURFfHMQBxkaEQpwfRdteUYFXlBNREV8cxAHGRoRCnB/F2FPH
- xl5SWlceRpmEAcTHBEKcF8XZGxeWxhzXHpOBWAQBxkaEQpwfRdubnBfTkh5chNzXBAHGRoRCnB
- sF2RLQ196AVpsZG4fEAcZGhEKcEMXbH4bXUJhZk5LQ2wQGhEKbX4XGxEKWE0XSxE=
-X-Proofpoint-ORIG-GUID: jULv3zLjzgHD9IAel9RB9REKChMh0S8q
-X-Authority-Info: v=2.4 cv=B/7r0/tM c=1 sm=1 tr=0 ts=66c9ffe6 b=1 cx=c_pps a=Apn7tidqNN5iDQmtGhWgxA==:117 a=Apn7tidqNN5iDQmtGhWgxA==:17 a=6PWTSvDoAAAA:8 a=fGYPQxYm8b8A:10 a=yoJbH4e0A30A:10 a=ZKS8Kw3IVw4A:10 a=g8TUdU_LZmEA:10 a=UgJECxHJAAAA:8 a=3j4BkbkPAAAA:8 a=yakVZWY8a7miyEpehJYA:9 a=QEXdDO2ut3YA:10 a=-3Qun70fUJ8qKFMmNDYA:9 a=64WbzpfL2Yj4XW0k6hGJ:22 a=-El7cUbtino8hM1DCn8D:22 cc=ntf awl=host:23859
-X-Proofpoint-GUID: jULv3zLjzgHD9IAel9RB9REKChMh0S8q
+X-Universally-Unique-Identifier: CB8E92C7-E97F-4D35-9691-2685E9199FE1
+Date: Sat, 24 Aug 2024 12:56:57 -0400
+References: <3C1795A3-FA85-4B1E-B1A1-1ADD146E72B8@josemoranurena.tech>
+ <1146849147.17980.1724513666615@postino-10-70-248-62.localdomain>
+ <34F6CCC7-D16F-4AD0-9747-07F9DFF7E1FE@josemoranurena.tech>
+ <565343097.78719.1724518407059@postino-10-70-218-213.localdomain>
+To: support@ionos.com
+In-Reply-To: <565343097.78719.1724518407059@postino-10-70-218-213.localdomain>
+Message-Id: <3EE8CE4E-9B55-406E-B3EF-0607FF610543@josemoranurena.tech>
 
-------=_Part_76084_271867650.1724514274545
-Content-Type: multipart/alternative; 
-	boundary="----=_Part_76083_1021318559.1724514274545"
 
-------=_Part_76083_1021318559.1724514274545
-Content-Type: text/plain; charset=utf-8
+--Apple-Mail=_EEEEDB88-29B3-49E6-AFD3-DC48A69D0D8B
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
 
-Dear Customer,
+Hello,
 
-Thank you for contacting us. My team and I are here 24/7 to help you with a=
-ny of your concerns. We will investigate your issue and respond to you as s=
-oon as possible. There is no need to reply to this message.
+It says in GoDaddy: "If you were the registrant of a domain name that =
+you feel was transferred away from GoDaddy without your authorization, =
+please provide all the requested information below. If you are disputing =
+the transfer of a domain name from another registrar to GoDaddy, please =
+contact the losing registrar for assistance.=E2=80=9D It says I=E2=80=99m =
+supposed to contact you guys and maybe you guys would contact GoDaddy?
 
-Did you know that the answers to many of our customers=E2=80=99 common ques=
-tions are already covered in the IONOS Help Center ? You can search the 2,0=
-00+ articles we have simply by visiting:
+From,
+Jose Moran
 
-https://ionos.com/help
+> On Aug 24, 2024, at 12:53=E2=80=AFPM, IONOS Support =
+<support@ionos.com> wrote:
+>=20
+> Dear Jose Moran Urena,
+> =20
+> Thanks for contacting IONOS.
+> =20
+> The information provided by the previous agent is correct. The domain  =
+clipzyapp.com <http://clipzyapp.com/> is not longer registered by us, =
+but by GoDaddy. Therefore any subject related to the domain will have to =
+be taken to them. =
+https://uk.godaddy.com/whois/results.aspx?itc=3Ddlp_domain_whois&domain=3D=
++clipzyapp.com+
+> =20
+> There is nothing IONOS can do related to this domain.
+> =20
+> I hope you find this information helpful. Should you have any further =
+questions or require additional assistance, please do not hesitate to =
+reach out to us again.
+> =20
+> Sincerely,
+> =20
+> Carlos Chinchilla
+> IONOS Customer Service
+> =20
+> Contact <https://contact.ionos.com/> | Facebook =
+<https://www.facebook.com/my.ionos> | X =
+<https://twitter.com/IONOS_help_US>
+> Email: support@ionos.com <mailto:support@ionos.com>
+> =20
+> IONOS Inc. <https://www.ionos.com/>
 
-Sincerely, Tiffany Masters
-
-Contact: https://contact.ionos.com
-Facebook: https://www.facebook.com/my.ionos
-E-Mail: support@ionos.com
-
-IONOS Inc.
-------=_Part_76083_1021318559.1724514274545
-Content-Type: text/html; charset=utf-8
+--Apple-Mail=_EEEEDB88-29B3-49E6-AFD3-DC48A69D0D8B
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
 
-<p>Dear Customer,<br><br>Thank you for contacting us. My team and I are her=
-e 24/7 to help you with any of your concerns. We will investigate your issu=
-e and respond to you as soon as possible. There is no need to reply to this=
- message.<br><br>Did you know that the answers to many of our customers=E2=
-=80=99 common questions are already covered in the  IONOS   Help Center ? Y=
-ou can search the 2,000+ articles we have simply by visiting:<br><br> https=
-://ionos.com/help <br><br>Sincerely,  Tiffany Masters <br><br>Contact:  htt=
-ps://contact.ionos.com <br>Facebook:  https://www.facebook.com/my.ionos <br=
->E-Mail:  support@ionos.com <br><br> IONOS Inc. </p>
-------=_Part_76083_1021318559.1724514274545--
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"overflow-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: =
+after-white-space;">Hello,<div><br></div><div>It says in GoDaddy: "If =
+you were the registrant of a domain name that you feel was transferred =
+away from GoDaddy without your authorization, please provide all the =
+requested information below. If you are disputing the transfer of a =
+domain name from another registrar to GoDaddy, please contact the losing =
+registrar for assistance.=E2=80=9D It says I=E2=80=99m supposed to =
+contact you guys and maybe you guys would contact =
+GoDaddy?</div><div><br></div><div>From,</div><div>Jose Moran<br =
+id=3D"lineBreakAtBeginningOfMessage"><div><br><blockquote =
+type=3D"cite"><div>On Aug 24, 2024, at 12:53=E2=80=AFPM, IONOS Support =
+&lt;support@ionos.com&gt; wrote:</div><br =
+class=3D"Apple-interchange-newline"><div><meta charset=3D"UTF-8"><div =
+data-email-gadget=3D"email-content-wrapper" style=3D"caret-color: rgb(0, =
+0, 0); font-style: normal; font-variant-caps: normal; font-weight: 400; =
+letter-spacing: normal; text-align: start; text-indent: 0px; =
+text-transform: none; white-space: normal; word-spacing: 0px; =
+-webkit-text-stroke-width: 0px; text-decoration: none; font-family: =
+Helvetica, Arial, sans-serif; font-size: 12pt;"><div style=3D"margin: =
+0px;"><span style=3D"font-weight: 400;">Dear Jose Moran =
+Urena,</span></div><p style=3D"margin: 0px;">&nbsp;</p><div =
+style=3D"margin: 0px;"><span style=3D"font-weight: 400;">Thanks for =
+contacting IONOS.</span></div><p style=3D"margin: 0px;">&nbsp;</p><div =
+style=3D"margin: 0px;"><span style=3D"font-weight: 400;">The information =
+provided by the previous agent is correct. The domain &nbsp;<a =
+href=3D"http://clipzyapp.com/" rel=3D"nofollow">clipzyapp.com</a><span =
+class=3D"Apple-converted-space">&nbsp;</span>is not longer registered by =
+us, but by GoDaddy. Therefore any subject related to the domain will =
+have to be taken to them.<span =
+class=3D"Apple-converted-space">&nbsp;</span><a =
+href=3D"https://uk.godaddy.com/whois/results.aspx?itc=3Ddlp_domain_whois&a=
+mp;domain=3D+clipzyapp.com+" target=3D"_blank" =
+rel=3D"noopener">https://uk.godaddy.com/whois/results.aspx?itc=3Ddlp_domai=
+n_whois&amp;domain=3D+clipzyapp.com+</a></span></div><p style=3D"margin: =
+0px;">&nbsp;</p><div style=3D"margin: 0px;"><span style=3D"font-weight: =
+400;">There is nothing IONOS can do related to this =
+domain.</span></div><p style=3D"margin: 0px;">&nbsp;</p><div =
+style=3D"margin: 0px;"><span style=3D"font-weight: 400;">I hope you find =
+this information helpful. Should you have any further questions or =
+require additional assistance, please do not hesitate to reach out to us =
+again.</span></div><p style=3D"margin: 0px;">&nbsp;</p><div =
+style=3D"margin: 0px;"><span style=3D"font-weight: =
+400;">Sincerely,</span></div><p style=3D"margin: 0px;">&nbsp;</p><div =
+style=3D"margin: 0px;"><span style=3D"font-weight: 400;">Carlos =
+Chinchilla</span></div><div style=3D"margin: 0px;"><span =
+style=3D"font-weight: 400;">IONOS Customer Service</span></div><p =
+style=3D"margin: 0px;">&nbsp;</p><div style=3D"margin: 0px;"><a =
+href=3D"https://contact.ionos.com/"><span style=3D"font-weight: =
+400;">Contact</span></a><span style=3D"font-weight: 400;"><span =
+class=3D"Apple-converted-space">&nbsp;</span>|<span =
+class=3D"Apple-converted-space">&nbsp;</span></span><a =
+href=3D"https://www.facebook.com/my.ionos"><span style=3D"font-weight: =
+400;">Facebook</span></a><span =
+class=3D"Apple-converted-space">&nbsp;</span>|<span =
+class=3D"Apple-converted-space">&nbsp;</span><a =
+href=3D"https://twitter.com/IONOS_help_US"><span style=3D"font-weight: =
+400;">X</span></a></div><div style=3D"margin: 0px;"><span =
+style=3D"font-weight: 400;">Email:<span =
+class=3D"Apple-converted-space">&nbsp;</span><a =
+href=3D"mailto:support@ionos.com">support@ionos.com</a></span></div><p =
+style=3D"margin: 0px;">&nbsp;</p><div style=3D"margin: 0px;"><a =
+href=3D"https://www.ionos.com/"><span style=3D"font-weight: 400;">IONOS =
+Inc.</span></a></div></div></div></blockquote></div><br></div></body></htm=
+l>=
 
-------=_Part_76084_271867650.1724514274545--
+--Apple-Mail=_EEEEDB88-29B3-49E6-AFD3-DC48A69D0D8B--
