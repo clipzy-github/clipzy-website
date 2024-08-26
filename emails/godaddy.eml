@@ -1,244 +1,794 @@
-From: jose@josemoranurena.tech
-Content-Type: multipart/alternative;
-	boundary="Apple-Mail=_19304FBB-9F19-4BDF-B2CA-C3CA28540C90"
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3807.100.34.1.2\))
+Return-path: <spc2_11155.17230850.1.076e7ade49f8e5b400373929f01f8ceb@bounces.cloud2.em.godaddy.com>
+Original-recipient: rfc822;jose@josemoranurena.tech
+Received: from p00-icloudmta-smtpin-us-east-2d-60-percent-27 by p66-mailgateway-smtp-645f477958-vz545 (mailgateway 2423B55)
+	with SMTP id 164e0fab-1523-47ee-8324-69685ab30b67 
+	for <jose@josemoranurena.tech>; Mon, 26 Aug 2024 16:51:59 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 164e0fab-1523-47ee-8324-69685ab30b67
+Received: from m114.cloud2.em.secureserver.net (m114.cloud2.em.secureserver.net [72.167.172.114])
+	by p00-icloudmta-smtpin-us-east-2d-60-percent-27.icloud.com (Postfix) with ESMTPS id 4E807C000AA
+	for <jose@josemoranurena.tech>; Mon, 26 Aug 2024 16:51:56 +0000 (UTC)
+X-ICL-Info: GAtbRFYDBVFFSlVFSwQEQgYMWxkXXlNCBhAWSk8CGFNDTkhGTwIYU0RNRhIcDUUSFks5RkkBA1dbSFFFSwAOV0VXV1lIBwAHQhgCEkwJUFoQTARDSAAFVUZAVE4eAAcETRoDFThSWRcbGgMEVlNaDQAdVFkdXRgFGh0HExxJGAEaFEYRHA1RDREYAhMBHlUNGFkUFEVaWREQOQwYC1VbDQcYCAIKVVgDWw0DFBAQXgcZFlsaSQECTBYVCQIcAhgHGFcVEhtFRAcGHBQBHUIYDBANRgcMQgsPREhSWRtcWRcRS0gSFR5FBxYMFBILVUQUEAtIGR1EFgYRRAEYHFFSBgxXBRgVEFIGSBoKGA1UBEwQFEgEHVNDEBAKAwUOVURMGxwSVxVZUl9JDAQaDh4HU0RMU1lPBAFRQU1eWUkHBFFFQVNHVgEBUEFPX0ZJAQNMRUpTRkEHA0xHLTA3EUAbU0VJS0FBHQdWRVRUR0seUwFHVw8ZDFVEDBQVSBoZWVpc
+X-ICL-Score: 3.3330332342
+Authentication-Results: bimi.icloud.com; bimi=none
+X-ARC-Info: policy=fail; arc=none
+Authentication-Results: arc.icloud.com; arc=none
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=godaddy.com
+X-DMARC-Policy: v=DMARC1; p=reject; pct=100; rua=mailto:report@dmarc.em.secureserver.net, mailto:dmarc_agg@dmarc.250ok.net; ruf=mailto:godaddy-dmarc@datafeeds.phishlabs.com
+X-DMARC-Info: pass=pass; dmarc-policy=reject; s=r1; d=r1; pdomain=godaddy.com
+Authentication-Results: dkim-verifier.icloud.com;
+	dkim=pass (2048-bit key) header.d=godaddy.com header.i=transferdisputes@godaddy.com header.b=GINU8+pw
+Authentication-Results: dkim-verifier.icloud.com;
+	dkim=pass (2048-bit key) header.d=cloud2.em.secureserver.net header.i=@cloud2.em.secureserver.net header.b=oFmccQoz
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of spc2_11155.17230850.1.076e7ade49f8e5b400373929f01f8ceb@bounces.cloud2.em.godaddy.com designates 72.167.172.114 as permitted sender) smtp.mailfrom=spc2_11155.17230850.1.076e7ade49f8e5b400373929f01f8ceb@bounces.cloud2.em.godaddy.com
+Received-SPF: pass (spf.icloud.com: domain of spc2_11155.17230850.1.076e7ade49f8e5b400373929f01f8ceb@bounces.cloud2.em.godaddy.com designates 72.167.172.114 as permitted sender) receiver=spf.icloud.com; client-ip=72.167.172.114; helo=m114.cloud2.em.secureserver.net; envelope-from=spc2_11155.17230850.1.076e7ade49f8e5b400373929f01f8ceb@bounces.cloud2.em.godaddy.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=sable.cloud2; d=godaddy.com;
+ h=Date:From:Reply-To:To:Message-ID:Subject:Mime-Version:Content-Type:
+ Content-Transfer-Encoding; i=transferdisputes@godaddy.com;
+ bh=O9M4ThHNXIt2JynEI6zYBlknBqfp078RXKM5fUUdWbw=;
+ b=GINU8+pweZpVwlqOceYiJ4eCgPWiBq9iI/SgYec/k0nPcEUweZ5a8TWT14kEuYsUpk4Yc+ORmWhh
+   nCNXP9JyGt5zTcN8dlA4ZJDji9T0s6jWr9j8QvSim2BVljxKd8micKJhDUmwg0Dm1O0ePM5ZJnUt
+   ZyGqfMzrzO4bDDdtzwCEXnwQdD6jXyktViuk/m5fGo7SQbs8GyLTF3XfSt2HglVAEk4mgMHovkp0
+   P9To2F4IxzG1/4rhblMavCNjnzgEUgPYud8sV1NOOb1821D1AxSQZrNM4MXyuTvamz3HoZygkuLi
+   ZYoyuQxLJcfFIuI7NvLY3qoYvEWxJ7XZPhuGMQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=nov01em; d=cloud2.em.secureserver.net;
+ h=Date:From:Reply-To:To:Message-ID:Subject:Mime-Version:Content-Type:
+ Content-Transfer-Encoding;
+ bh=O9M4ThHNXIt2JynEI6zYBlknBqfp078RXKM5fUUdWbw=;
+ b=oFmccQoz3zx164b4P4YLEM0bxHkSZhyu2lQaI7nhixXxo4mhXOtFbmGvx4i9PKGA7/YFx26xvyT3
+   xkM5Q3s4gPtEY/GCUaFOoZfBjTwdg2HuZmJiZzEdCyn9Sqk6FgHOuuOtGP+6wyZ/Og4te7ouIwqy
+   jG1lib03kO4Na4JVESypcGZ7jxU4u6bWYuUnJwJPn+IsL3DC0Fmj4cae5P4ptllT1oIrDJwQnKVT
+   025ucQ1ppphMnhELPx1FfFMf0UKioc1Fz68P98AXhhQBbXxeKu0u2YfDiVDWTPfh9Dm4D3j6uWC2
+   zvH+C/8o/bsRuZ5zPpudIfKXrtCbiEMudZjLVg==
+Received: by m114.cloud2.em.secureserver.net id hpipam36be4r for <jose@josemoranurena.tech>; Mon, 26 Aug 2024 16:51:55 +0000 (envelope-from <spc2_11155.17230850.1.076e7ade49f8e5b400373929f01f8ceb@bounces.cloud2.em.godaddy.com>)
+Date: Mon, 26 Aug 2024 16:51:55 +0000
+From: GoDaddy <transferdisputes@godaddy.com>
+Reply-To: transferdisputes@godaddy.com
+To: jose@josemoranurena.tech
+Message-ID: <ubmv.11155.7473448.17230850.1724691115.0351975.2TV@ip-100-69-140-203.ec2.internal.mail>
 Subject: Re: CLIPZYAPP.COM [Incident:501774]
-X-Universally-Unique-Identifier: 0631C007-7B02-46F7-ACF1-E99FB45F3F2C
-Date: Mon, 26 Aug 2024 11:42:33 -0400
-References: <ubmv.11155.7473448.17202129.1724686861.9929135.2TV@ip-100-69-142-124.ec2.internal.mail>
-To: transferdisputes@godaddy.com
-In-Reply-To: <ubmv.11155.7473448.17202129.1724686861.9929135.2TV@ip-100-69-142-124.ec2.internal.mail>
-Message-Id: <D5F0745E-667F-43F9-B88E-C0A3D3BCBA97@josemoranurena.tech>
-
-
---Apple-Mail=_19304FBB-9F19-4BDF-B2CA-C3CA28540C90
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=utf-8
-
-Hello,
-
-I contacted my original registrar two times and they said they can=E2=80=99=
-t do anything about it and I have to contact you. A former employee did =
-an authorized transfer from IONOS to GoDaddy, and I have proof of =
-purchase and the CP575 if needed.
-
-From,
-Jose Moran Urena
-
-> On Aug 26, 2024, at 11:41=E2=80=AFAM, GoDaddy =
-<transferdisputes@godaddy.com> wrote:
->=20
->  =
-<https://click.godaddy.com/email/4I7BQTjd8cddZISivu8WXp/?currencyId=3DUSD&=
-eid=3Docp.email.transactional/4374.LayoutSimple/Banner/LogoGDOnly.link.cli=
-ck&marketId=3Den-US&redir=3Dhttps%3A%2F%2Fwww.godaddy.com%3Fisc%3Dgdbb4374=
-%26utm_source%3Dgdocp%26utm_medium%3Demail%26utm_campaign%3Den-US_other_em=
-ail-nonrevenue_base_gd%26utm_content%3D240826_4374_Engagement_Other_Servic=
-e_Customer-Service_gdbb4374_4I7BQTjd8cddZISivu8WXp>
-> Dear Jose,
->=20
-> We do not have a record of you as the registrant of CLIPZYAPP.COM =
-<http://clipzyapp.com/>. If the domain name was the subject of an =
-unauthorized transfer from another registrar, please contact your =
-registrar to find out how the name was allowed to transfer to GoDaddy. =
-If the transfer is found to be unauthorized, your registrar may contact =
-us directly at transferdisputes@godaddy.com =
-<mailto:transferdisputes@godaddy.com>.
->=20
-> Best,
->=20
-> Transfer Disputes Team
-> GoDaddy
->=20
-> [Incident:501774]
-> =20
-> =20
-> =20
-> Copyright =C2=A9 1999-2024 GoDaddy Operating Company, LLC. 100 S Mill =
-Ave, Suite 1600, Tempe, AZ 85281 USA. All rights reserved.
-> =20
-> 6436009211
-
-
---Apple-Mail=_19304FBB-9F19-4BDF-B2CA-C3CA28540C90
-Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0
 Content-Type: text/html;
-	charset=utf-8
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-MID: 77394eda-542c-4606-9eab-f968fa494e6e
+X-10pl8ID: 4374
+X-MachineName: P3PWGDMAILER109
+X-Sable-ID: spc2_11155.17230850.1.076e7ade49f8e5b400373929f01f8ceb
+X-Report-Abuse: You can also report abuse here:
+ https://email.cloud2.secureclick.net/abuse/new?id=11155.17230850.1.076e7ade49f8e5b400373929f01f8ceb
+X-Virtual-MTA: m114
+X-CLX-Shades: None
+X-MANTSH: 1TFkXGBsSEQpZRBdvGG0ScHNgEmlnYxEKWU0XZEVETxEKWUkXGnEaEBp3BhsTEnE
+ THhAadwYYGgYaEQpZXhdsbHkRCkNOF1oSYXlkWEdiYG1FGQdSeGViGWVlZhhGExNDUE5taF5ME
+ QpYXBcZBBoEHxoFGxoEGxIYBBgbGQQbHRAbHhofGhEKXlkXT2tGTmIRCk1cFxgTHBEKTFoXaG1
+ NTWsRCkxGF01rEQpDWhcdGAQbHB0EGx0YBBsbHhEKQl4XGxEKQlwXGxEKXk4XGxEKQksXZGtkE
+ 0dSaFBZAUkRCkJJF2RrZBNHUmhQWQFJEQpCRRdpExhDZkUYaExQGREKQk4XZGtkE0dSaFBZAUk
+ RCkJMF2hma2h8a39DHGBAEQpCbBdhXhpvfX1+Um5CExEKQkAXZmdEXl95UElIbRwRCkJYF2wTS
+ EgBZxlmZXtjEQpNXhcbEQpaWBcZEQpwZxd6QU1CTmVkZFhvaxAaEQpwaBdlQk4dZ1BHXWhYTxA
+ HGAQcEQpwaBduHExOf1JhE2hMXxAHGAQcEQpwaBdsbUR4b09JGAUBYBAYBBkRCnBoF2duEhx/X
+ kh9Qx4eEAcTBB0RCnBoF2dgbWxaS0wcW2FaEAcbHBEKcGgXYlobUGReek8Yfm8QGRoRCnBoF2R
+ /Y3wTfEBlH0IcEAcbHBEKcGgXZk1rHFtzXxxYXWgQBxscEQpwfxdkbWFBWWFmGn15fBAHGxkRC
+ nBfF28faExyWnhdYWRCEBgYEQpwfRdgeG1pfh5LYlxLRhAaEQpwXxdsY2RdUH1YeXB9UBAHGQQ
+ YEQpwfRdoU3NwYGV7QQVfbBAaEQpwfxdgZn9QGnlmb0JoXxAbExEKcF8XY2B4UkFdfEJST1IQG
+ hEKcH0XY2B4UkFdfEJST1IQGhEKcF8Xa29mUmNBYBlOWWUQGhEKcH0XaVNsTEBdbWhDEmYQGhE
+ KcGwXYVNpWAVCaEN5UmAQBxsaEQptfhcbEQpYTRdLEQ==
+X-Proofpoint-ORIG-GUID: p8KSNrmHJGo3-xROH3OOL2l99izdGBtf
+X-Authority-Info: v=2.4 cv=IavVWnqa c=1 sm=1 tr=0 ts=66ccb2ac b=1 cx=c_pps a=rjT6l03krfFfUT8GjMwHCA==:117 a=rjT6l03krfFfUT8GjMwHCA==:17 a=6PWTSvDoAAAA:8 a=IkcTkHD0fZMA:10 a=yoJbH4e0A30A:10 a=SSmOFEACAAAA:8 a=UqCG9HQmAAAA:8 a=69EAbJreAAAA:8 a=TZb1taSUAAAA:8 a=WerWTMxXAAAA:8 a=eM1FkN8WAAAA:8 a=Tzf1TlsZAAAA:8 a=1nS4HS4meZ_ufgzjcSUA:9 a=t4qBacyGH7zmnumT:21 a=frz4AuCg-hUA:10 a=QEXdDO2ut3YA:10 a=RVmHIydaz68A:10 a=64WbzpfL2Yj4XW0k6hGJ:22 a=Kx9DWCSqnPAMGBl67n-C:22 a=aeS4gRMSFO4yfv6C_BVi:22
+X-Proofpoint-GUID: p8KSNrmHJGo3-xROH3OOL2l99izdGBtf
 
-<html><head><meta http-equiv=3D"content-type" content=3D"text/html; =
-charset=3Dutf-8"></head><body style=3D"overflow-wrap: break-word; =
--webkit-nbsp-mode: space; line-break: =
-after-white-space;">Hello,<div><br></div><div>I contacted my original =
-registrar two times and they said they can=E2=80=99t do anything about =
-it and I have to contact you. A former employee did an authorized =
-transfer from IONOS to GoDaddy, and I have proof of purchase and the =
-CP575 if needed.</div><div><br></div><div>From,</div><div>Jose Moran =
-Urena<br id=3D"lineBreakAtBeginningOfMessage"><div><br><blockquote =
-type=3D"cite"><div>On Aug 26, 2024, at 11:41=E2=80=AFAM, GoDaddy =
-&lt;transferdisputes@godaddy.com&gt; wrote:</div><br =
-class=3D"Apple-interchange-newline"><div><meta charset=3D"UTF-8"><center =
-style=3D"caret-color: rgb(0, 0, 0); font-family: Helvetica; font-size: =
-12px; font-style: normal; font-variant-caps: normal; font-weight: 400; =
-letter-spacing: normal; text-indent: 0px; text-transform: none; =
-white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; =
-text-decoration: none; width: 903px; table-layout: fixed;"><table =
-width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D"#f5f5f5" =
-style=3D"border-spacing: 0px; text-align: center;"><tbody><tr><td><table =
-width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
-bgcolor=3D"#f5f5f5" style=3D"border-spacing: 0px;"><tbody><tr><td =
-bgcolor=3D"#f5f5f5" style=3D"padding-bottom: 15px;"><div =
-style=3D"max-width: 600px; margin: 0px auto; padding-left: 20px; =
-padding-right: 20px;"><table cellpadding=3D"0" cellspacing=3D"0" =
-border=3D"0" align=3D"center" width=3D"100%" style=3D"border-spacing: =
-0px; font-family: sans-serif; color: rgb(17, 17, 17);"><tbody><tr><td =
-align=3D"center" class=3D"stretch" style=3D"padding: 0px;"><table =
-width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
-class=3D"mobiletextalign" align=3D"left" style=3D"border-spacing: =
-0px;"><tbody><tr><td class=3D"mobiletextalign" style=3D"padding: =
-0px;"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
-class=3D"mobiletextalign" align=3D"left" style=3D"border-spacing: =
-0px;"><tbody><tr><td aclass=3D"mobiletextalign" style=3D"padding: =
-0px;"><a =
-href=3D"https://click.godaddy.com/email/4I7BQTjd8cddZISivu8WXp/?currencyId=
-=3DUSD&amp;eid=3Docp.email.transactional/4374.LayoutSimple/Banner/LogoGDOn=
-ly.link.click&amp;marketId=3Den-US&amp;redir=3Dhttps%3A%2F%2Fwww.godaddy.c=
-om%3Fisc%3Dgdbb4374%26utm_source%3Dgdocp%26utm_medium%3Demail%26utm_campai=
-gn%3Den-US_other_email-nonrevenue_base_gd%26utm_content%3D240826_4374_Enga=
-gement_Other_Service_Customer-Service_gdbb4374_4I7BQTjd8cddZISivu8WXp"><im=
-g class=3D"stretch-img" =
-src=3D"https://p3pprd001.cloudstorage.secureserver.net/cdn/Image/Email/All=
-/976dd421-fedb-4c69-b57c-54894570d9ce/godaddy-logo-icon-300x90.png" =
-width=3D"150" height=3D"45" border=3D"0" alt=3D"GoDaddy" style=3D"display:=
- block; color: rgb(17, 17, 17); font-family: Arial, sans-serif; =
-font-size: =
-12px;"></a></td></tr></tbody></table></td></tr></tbody></table></td></tr><=
-/tbody></table></div></td></tr></tbody></table><table width=3D"100%" =
-border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f5f5f5" =
-style=3D"border-spacing: 0px;"><tbody><tr><td bgcolor=3D"#f5f5f5" =
-style=3D"background-color: rgb(245, 245, 245); padding: 0px;"><div =
-style=3D"max-width: 600px; margin: 0px auto; padding-left: 20px; =
-padding-right: 20px;"><table bgcolor=3D"#fff" width=3D"100%" =
-align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(17, =
-17, 17);"><tbody><tr><td dir=3D"ltr" bgcolor=3D"#fff" align=3D"left" =
-style=3D"padding: 40px 40px 0px; text-align: left; background-color: =
-rgb(255, 255, 255); font-family: gdsherpa, Helvetica, Arial, =
-sans-serif;"><p style=3D"margin: 0px; padding: 0px; font-family: =
-gdsherpa, Helvetica, Arial, sans-serif; font-size: 14px; line-height: =
-24px;"></p><div style=3D"margin: 0px; padding: 0px;">Dear =
-Jose,</div><div style=3D"margin: 0px; padding: 0px;"><br></div><div =
-style=3D"margin: 0px; padding: 0px;">We do not have a record of you as =
-the registrant of<span class=3D"Apple-converted-space">&nbsp;</span><a =
-href=3D"http://clipzyapp.com/">CLIPZYAPP.COM</a>. If the domain name was =
-the subject of an unauthorized transfer from another registrar, please =
-contact your registrar to find out how the name was allowed to transfer =
-to GoDaddy. If the transfer is found to be unauthorized, your registrar =
-may contact us directly at<span =
-class=3D"Apple-converted-space">&nbsp;</span><a =
-href=3D"mailto:transferdisputes@godaddy.com">transferdisputes@godaddy.com<=
-/a>.</div><div style=3D"margin: 0px; padding: 0px;"><br></div><div =
-style=3D"margin: 0px; padding: 0px;">Best,</div><div style=3D"margin: =
-0px; padding: 0px;"><br></div><div style=3D"margin: 0px; padding: =
-0px;">Transfer Disputes Team</div><div style=3D"margin: 0px; padding: =
-0px;">GoDaddy</div><br>[Incident:501774]<p style=3D"margin: 0px; =
-padding: =
-0px;"></p></td></tr></tbody></table></div></td></tr></tbody></table><table=
- width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
-bgcolor=3D"#f5f5f5" style=3D"border-spacing: 0px;"><tbody><tr><td =
-bgcolor=3D"#f5f5f5" style=3D"padding-top: 0px; padding-bottom: =
-0px;"><div style=3D"max-width: 600px; margin: 0px auto; padding-left: =
-20px; padding-right: 20px;"><table align=3D"center" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(255, =
-255, 255); margin: 0px auto; width: 600px; max-width: =
-600px;"><tbody><tr><td style=3D"padding: 0px;"><table width=3D"100%" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(255, =
-255, 255);"><tbody><tr><td style=3D"padding: 40px 40px 0px; =
-background-color: rgb(255, 255, 255); width: 520px; text-align: =
-left;"><p style=3D"margin: 0px; padding: 0px; line-height: 0px; =
-font-size: =
-4px;">&nbsp;</p></td></tr></tbody></table></td></tr></tbody></table></div>=
-</td></tr></tbody></table><table width=3D"100%" border=3D"0" =
-cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f5f5f5" =
-style=3D"border-spacing: 0px;"><tbody><tr><td bgcolor=3D"#f5f5f5" =
-style=3D"padding-top: 0px; padding-bottom: 0px;"><div style=3D"max-width: =
-600px; margin: 0px auto; padding-left: 20px; padding-right: =
-20px;"><table bgcolor=3D"#f5f5f5" align=3D"center" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(17, =
-17, 17); margin: 0px auto; width: 600px; max-width: =
-600px;"><tbody><tr><td style=3D"padding: 0px;"><table width=3D"100%" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(17, =
-17, 17);"><tbody><tr><td style=3D"padding: 40px 40px 0px; =
-background-color: rgb(245, 245, 245); width: 520px; text-align: =
-left;"><p style=3D"margin: 0px; padding: 0px; line-height: 0px; =
-font-size: =
-4px;">&nbsp;</p></td></tr></tbody></table></td></tr></tbody></table></div>=
-</td></tr></tbody></table><table width=3D"100%" border=3D"0" =
-cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f5f5f5" =
-style=3D"border-spacing: 0px;"><tbody><tr><td bgcolor=3D"#f5f5f5" =
-style=3D"padding-top: 0px; padding-bottom: 0px;"><div style=3D"max-width: =
-600px; margin: 0px auto; padding-left: 20px; padding-right: =
-20px;"><table bgcolor=3D"#f5f5f5" align=3D"center" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(17, =
-17, 17); margin: 0px auto; width: 600px; max-width: =
-600px;"><tbody><tr><td style=3D"padding: 0px;"><table width=3D"100%" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(17, =
-17, 17);"><tbody><tr><td style=3D"padding: 40px 40px 0px; =
-background-color: rgb(245, 245, 245); width: 520px; text-align: =
-left;"><p style=3D"margin: 0px; padding: 0px; line-height: 0px; =
-font-size: =
-4px;">&nbsp;</p></td></tr></tbody></table></td></tr></tbody></table></div>=
-</td></tr></tbody></table><table width=3D"100%" border=3D"0" =
-cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f5f5f5" =
-style=3D"border-spacing: 0px;"><tbody><tr><td bgcolor=3D"#f5f5f5" =
-style=3D"padding-top: 0px; padding-bottom: 0px;"><div style=3D"max-width: =
-600px; margin: 0px auto; padding-left: 20px; padding-right: =
-20px;"><table align=3D"center" style=3D"border-spacing: 0px; =
-font-family: sans-serif; color: rgb(118, 118, 118); margin: 0px auto; =
-width: 600px; max-width: 600px;"><tbody><tr><td style=3D"padding: =
-0px;"><table width=3D"100%" style=3D"border-spacing: 0px; font-family: =
-sans-serif; color: rgb(118, 118, 118);"><tbody><tr><td dir=3D"ltr" =
-style=3D"padding: 0px 0px 15px; background-color: rgb(245, 245, 245); =
-width: 600px; text-align: left;"><div style=3D"margin: 0px; padding: =
-0px; font-size: 12px; line-height: 22px;">Copyright =C2=A9 1999-2024 =
-GoDaddy Operating Company, LLC. 100 S Mill Ave, Suite 1600, Tempe, AZ =
-85281 USA. All rights =
-reserved.</div></td></tr></tbody></table></td></tr></tbody></table></div><=
-/td></tr></tbody></table></td></tr></tbody></table><table width=3D"100%" =
-border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f5f5f5" =
-style=3D"border-spacing: 0px;"><tbody><tr><td bgcolor=3D"#f5f5f5" =
-style=3D"padding-top: 0px; padding-bottom: 0px;"><div style=3D"max-width: =
-600px; margin: 0px auto; padding-left: 20px; padding-right: =
-20px;"><table bgcolor=3D"#f5f5f5" align=3D"center" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(17, =
-17, 17); margin: 0px auto; width: 600px; max-width: =
-600px;"><tbody><tr><td style=3D"padding: 0px;"><table width=3D"100%" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(17, =
-17, 17);"><tbody><tr><td style=3D"padding: 20px 40px 0px; =
-background-color: rgb(245, 245, 245); width: 520px; text-align: =
-left;"><p style=3D"margin: 0px; padding: 0px; line-height: 0px; =
-font-size: =
-4px;">&nbsp;</p></td></tr></tbody></table></td></tr></tbody></table></div>=
-</td></tr></tbody></table></center><table width=3D"100%" border=3D"0" =
-cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f5f5f5" =
-style=3D"border-spacing: 0px; caret-color: rgb(0, 0, 0); font-family: =
-Helvetica; font-size: 12px; font-style: normal; font-variant-caps: =
-normal; font-weight: 400; letter-spacing: normal; text-align: start; =
-text-transform: none; white-space: normal; word-spacing: 0px; =
--webkit-text-stroke-width: 0px; text-decoration: none;"><tbody><tr><td =
-bgcolor=3D"#f5f5f5" style=3D"padding-top: 0px; padding-bottom: =
-0px;"><div style=3D"max-width: 600px; margin: 0px auto; padding-left: =
-20px; padding-right: 20px;"><table align=3D"center" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(118, =
-118, 118); margin: 0px auto; width: 600px; max-width: =
-600px;"><tbody><tr><td style=3D"padding: 0px;"><table width=3D"100%" =
-style=3D"border-spacing: 0px; font-family: sans-serif; color: rgb(118, =
-118, 118);"><tbody><tr><td align=3D"right" style=3D"padding: 0px 0px =
-15px; background-color: rgb(245, 245, 245); width: 600px; text-align: =
-right;"><div style=3D"margin: 0px; padding: 0px; font-size: 12px; =
-line-height: 22px; text-align: right; text-decoration: none =
-!important;">6436009211</div></td></tr></tbody></table></td></tr></tbody><=
-/table></div></td></tr></tbody></table></div></blockquote></div><br></div>=
-</body></html>=
+<!-- SUBJECTLINE -->=0D
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://w=
+ww.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0D
+<html xmlns=3D"https://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-micr=
+osoft-com:vml">=0D
+<head>=0D
+<meta https-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"=
+ />=0D
+<!--[if !mso]><!--=0D
+<meta https-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=0D
+<!--<![endif]-->=0D
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0">=0D
+<meta name=3D"x-apple-disable-message-reformatting" />=0D
+<title>Re: CLIPZYAPP.COM [Incident:501774]</title>=0D
+<style type=3D"text/css">=0D
+=0D
+	p {margin:0px;margin-bottom:0px;padding:0px;}=0D
+	table {border-spacing:0;}=0D
+	* {text-size-adjust: none !important;-ms-text-size-adjust: none !importa=
+nt;-webkit-text-size-adjust: none !important;}=0D
+	=0D
+	/* outlook / hotmail */=0D
+	.ExternalClass{width:100%;}=0D
+	.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass fo=
+nt, .ExternalClass td, .ExternalClass div{line-height: 100%;}=0D
+	table, td {mso-table-lspace:0pt;mso-table-rspace:0pt;}=0D
+	img{-ms-interpolation-mode:bicubic;}=0D
+	.ReadMsgBody {width: 100%;}=0D
+	/* END outlook / hotmail */=0D
+	=0D
+	/* gmail */=0D
+	u + #body a {color: inherit;text-decoration: none;font-size: inherit;fon=
+t-family: inherit;font-weight: inherit;line-height: inherit;}=0D
+	/* END gmail */=0D
+	=0D
+	/* ios */=0D
+	body{-webkit-text-size-adjust:100%;}=0D
+	a[x-apple-data-detectors] {color: inherit !important;text-decoration: no=
+ne !important;font-size: inherit !important;font-family: inherit !importa=
+nt;font-weight: inherit !important;line-height: inherit !important;}=0D
+	/* END ios */=0D
+=0D
+	/* windows mobile */=0D
+	body{-ms-text-size-adjust:100%;}=0D
+	/* END windows mobile */=0D
+=0D
+	/* android */=0D
+	body {margin:0 auto!important;-webkit-font-smoothing: antialiased;}=0D
+	u + .body .full-wrap {width:100% !important;width:100vw !important;}=0D
+	div[style*=3D"margin: 14px 0;"] { margin: 0 !important; }=0D
+	div[style*=3D"margin: 16px 0;"] { margin: 0 !important; }=0D
+	/* END android */=0D
+=0D
+	/* font reset */=0D
+	.prehdr {font-size:4px;line-height:6px !important;font-family:'gdsherpa'=
+, Helvetica, Arial, sans-serif;Margin-top:0px;}=0D
+	/* END font reset */=0D
+		=0D
+	/*  v2018 asterisk */=0D
+	.h1asterisk {font-size: 18px !important;line-height:0px !important;verti=
+cal-align: 21px !important;}=0D
+	.h2asterisk {font-size: 14px !important;line-height:0px !important;verti=
+cal-align: 14px !important;}=0D
+	.h3asterisk {font-size: 10px !important;line-height:0px !important;verti=
+cal-align: 10px !important;}=0D
+	/* END v2018 asterisk */=0D
+	=0D
+	/* image rollover */=0D
+	.img-rollover:hover .img-hide {max-height: 0px !important;}  =0D
+  	.img-rollover:hover div img { max-height: none !important;}=0D
+	/* END image rollover */=0D
+=0D
+	/* link rollover */=0D
+	.h-hover:hover {color:#09757a !important;}=0D
+	a.survey-hvr:hover {background-color:#111111 !important;color:#ffffff !i=
+mportant;}=0D
+	/* end link rollover */=0D
+	=0D
+	/* hide interactive in Outlook.com and Hotmail.com */=0D
+	[class=3D"x_carousel"] {display: none !important;max-height:none !import=
+ant;overflow:hidden !important;}=0D
+	[class=3D"x_car-box"] {display: none !important;max-height:none !importa=
+nt;overflow:hidden !important;}=0D
+	[class=3D"x_fallback"] {display: block !important;}=0D
+	/* END hide interactive in Outlook.com and Hotmail.com */=0D
+=0D
+	/* hide interactive in Outlook for mobile */=0D
+	body[data-outlook-cycle] .carousel {display: none !important;max-height:=
+none !important;overflow:hidden !important;}=0D
+	body[data-outlook-cycle] .fallback {display: block !important;}=0D
+	/* END hide interactive in Outlook for mobile */=0D
+=0D
+	/* hide interactive in Office365 */=0D
+	[owa] .carousel {display: none !important;max-height:none !important;ove=
+rflow:hidden !important;}=0D
+	[owa] .fallback {display: block !important;}=0D
+	/* END hide interactive in Office365 */=0D
+	=0D
+	/* fonts */=0D
+	@font-face {=0D
+		font-family: 'gdsherpa-regular';=0D
+		src: url('https://imagesak.secureserver.net/promos/htmlemails/fonts/GDS=
+herpa-Regular.eot?#iefix') format('embedded-opentype'),=0D
+			url('https://imagesak.secureserver.net/promos/htmlemails/fonts/GDSherp=
+a-Regular.woff2') format('woff2'),=0D
+			url('https://imagesak.secureserver.net/promos/htmlemails/fonts/GDSherp=
+a-Regular.woff') format('woff'),=0D
+			url('https://imagesak.secureserver.net/promos/htmlemails/fonts/GDSherp=
+a-Regular.ttf') format('truetype');=0D
+		font-weight: 400;=0D
+		font-style: normal;=0D
+	}=0D
+	@font-face {=0D
+		font-family: 'gdsherpa-bold';=0D
+		src: url('https://imagesak.secureserver.net/promos/htmlemails/fonts/GDS=
+herpa-Bold.eot?#iefix') format('embedded-opentype'),=0D
+			url('https://imagesak.secureserver.net/promos/htmlemails/fonts/GDSherp=
+a-Bold.woff2') format('woff2'),=0D
+			url('https://imagesak.secureserver.net/promos/htmlemails/fonts/GDSherp=
+a-Bold.woff') format('woff'),=0D
+			url('https://imagesak.secureserver.net/promos/htmlemails/fonts/GDSherp=
+a-Bold.ttf') format('truetype');=0D
+		font-weight: 700;=0D
+		font-style: normal;=0D
+	}=0D
+	@font-face {=0D
+  		font-family: 'Boing-Bold';=0D
+  		src: url('http://img1.wsimg.com/ux/fonts/1.3/eot/Boing-Bold.eot?#iefi=
+x') format('embedded-opentype'),=0D
+          	url('http://img1.wsimg.com/ux/fonts/1.3/woff2/Boing-Bold.woff2=
+') format('woff2'),=0D
+          	url('http://img1.wsimg.com/ux/fonts/1.3/woff/Boing-Bold.woff')=
+ format('woff'),=0D
+          	url('http://img1.wsimg.com/ux/fonts/1.3/ttf/Boing-Bold.ttf') f=
+ormat('truetype');=0D
+  		font-weight: 400;=0D
+  		font-style: normal;=0D
+	}=0D
+	@font-face {=0D
+		font-family: 'gd-sage-bold';=0D
+		src: url('https://img1.wsimg.com/ux/fonts/gd-sage/1.0/gd-sage-bold.woff=
+2') format('woff2'),=0D
+			url('https://img1.wsimg.com/ux/fonts/gd-sage/1.0/gd-sage-bold.woff') f=
+ormat('woff'),=0D
+			url('https://img1.wsimg.com/ux/fonts/gd-sage/1.0/gd-sage-bold.ttf') fo=
+rmat('truetype');=0D
+		font-style: normal;=0D
+	}=0D
+	/* END fonts */=0D
+	=0D
+	/* hide mobile element */=0D
+	.mobile {border-spacing:0;display:none!important;height:0;max-height:0;m=
+so-hide:all;overflow:hidden;visibility:hidden;width:0;}=0D
+	/* END hide mobile element */=0D
+	=0D
+	/* query */=0D
+	@media only screen and (max-width: 500px) {=0D
+	=0D
+		/* hide mobile element */=0D
+		.hidecellinmobile {display:none !important;}=0D
+		/* END hide mobile element */=0D
+		=0D
+		/* align phone number in header */=0D
+		.phonenumber {text-align:center !important;}=0D
+		/* END align phone number in header */=0D
+		=0D
+		/* resize headlines */=0D
+		.h2mobile {font-size:26px !important; line-height:36px !important;}=0D
+		.h0-primary-mobile {font-size:36px !important; line-height: 46px !impor=
+tant;}=0D
+		.h1-primary-mobile {font-size:29px !important; line-height: 39px !impor=
+tant;}=0D
+		.h2-primary-mobile {font-size:23px !important; line-height: 33px !impor=
+tant;}=0D
+		.h3-primary-mobile {font-size:21px !important; line-height: 31px !impor=
+tant;}=0D
+		.h1-secondary-mobile {font-size:21px !important; line-height: 31px !imp=
+ortant;}=0D
+		.h2-secondary-mobile {font-size:18px !important; line-height: 28px !imp=
+ortant;}=0D
+		/* END resize headlines */=0D
+		=0D
+		/* v2019 asterisks */=0D
+		.h0-primary-asterisk {font-size:18px !important;vertical-align:16px !im=
+portant;}=0D
+		.h1-primary-asterisk {font-size:14px !important;vertical-align:14px !im=
+portant;}=0D
+		.h2-primary-asterisk {font-size:12px !important;vertical-align:10px !im=
+portant;}=0D
+		.h1-secondary-asterisk {vertical-align:4px !important;}=0D
+		.h2-secondary-asterisk {vertical-align:4px !important;}=0D
+		/* END v2019 asterisks */=0D
+		=0D
+		/* stack columns */=0D
+		.two-column .column,=0D
+		.three-column .column {max-width: 100% !important;width:100% !important=
+;}=0D
+		/* END stack columns */=0D
+		=0D
+		/* align text */=0D
+		.mobiletextalign {text-align: center !important}=0D
+		/* END align text */=0D
+		=0D
+		/* responsive width */=0D
+		.stretch {width:100% !important;display:table !important;}=0D
+		.stretch-img {margin:0 auto !important;}=0D
+		/* END responsive width */=0D
+		 =0D
+		 /* show mobile element */=0D
+		.mobile,=0D
+		td.mobile,=0D
+		table.mobile,=0D
+		img.mobile,=0D
+		div.mobile,=0D
+		tr.mobile {display: inline-block !important;width: auto !important;over=
+flow: visible !important;height: auto !important;max-height: inherit !imp=
+ortant;font-size: 14px !important;line-height:21px !important;visibility:=
+visible !important;}=0D
+		/* END show mobile element */=0D
+		=0D
+		/* display main image */=0D
+		img.main-image {display: block !important;height: auto !important;max-h=
+eight: inherit !important;overflow: visible !important;visibility:visible=
+ !important;width: 100% !important;}=0D
+		/* END display main image */=0D
+=0D
+		/* fix logo space in header */=0D
+		.mobile-padding-fix {padding-right:16px !important;}=0D
+		.mobile-padding-fix-right {padding-left:20px !important;}=0D
+		.mobile-padding-fix-right-0 {padding-right:0 !important;}=0D
+		.ar-mobile-padding-fix {padding-left:16px !important;}=0D
+		.ar-mobile-padding-fix-text {padding-right:20px !important;}=0D
+		/* END fix logo space in header */=0D
+		=0D
+		/* responsive table */=0D
+		table.full-width {width: 100% !important;}=0D
+		/* END responsive table */=0D
+	} =0D
+	/* END query */=0D
+	=0D
+	/* show custom fonts */=0D
+	[style*=3D"gdsherpa-regular"] {font-family:'gdsherpa-regular', Arial, sa=
+ns-serif !important;}	=0D
+	[style*=3D"gdsherpa-bold"] {font-family:'gdsherpa-bold', 'Arial Bold', A=
+rial, sans-serif !important;}=0D
+	[style*=3D"Boing-Bold"] {font-family:'Boing-Bold', 'Arial Black', Arial,=
+ sans-serif !important;}=0D
+	[style*=3D"gd-sage-bold"] {font-family:'gd-sage-bold', 'Times New Roman'=
+, Times, serif !important;}=0D
+	/* END show custom fonts */=0D
+	=0D
+	/* yahoo */=0D
+	@media screen yahoo {=0D
+		* { overflow: visible!important }=0D
+		.y-overflow-hidden { overflow: hidden!important }=0D
+	}=0D
+	/* END yahoo */=0D
+	=0D
+	/* video */=0D
+	 @media (-webkit-min-device-pixel-ratio: 0) and (min-device-width:1024px=
+) {=0D
+  		.video-wrapper { display:block!important; }=0D
+  		.video-fallback { display:none!important; }=0D
+ 	}=0D
+  	@supports (-webkit-overflow-scrolling:touch) and (color:#FFFFFF) {=0D
+    	div[class^=3Dvideo-wrapper] { display:block!important; }=0D
+    	div[class^=3Dvideo-fallback] { display:none!important; }=0D
+  	}=0D
+  	#MessageViewBody .video-wrapper { display:block!important; }=0D
+  	#MessageViewBody .video-fallback { display:none!important; }=0D
+	/* END video */=0D
+           =0D
+</style>=0D
+=0D
+<!--[if (gte mso 9)|(IE)]>=0D
+<style type=3D"text/css">=0D
+    table {border-collapse: collapse !important;}=0D
+</style>=0D
+<![endif]-->=0D
+=0D
+<!--[if gte mso 9]>=0D
+<xml>=0D
+	<o:OfficeDocumentSettings>=0D
+		<o:AllowPNG></o:AllowPNG>=0D
+		<o:PixelsPerInch>96</o:PixelsPerInch>=0D
+	</o:OfficeDocumentSettings>=0D
+</xml>=0D
+<![endif]-->=0D
+</head>=0D
+<body style=3D"margin-top:0 !important;margin-bottom:0 !important;margin-=
+right:0 !important;margin-left:0 !important;padding: 0;" ><img src=3D'htt=
+ps://et.secureserver.net/pixel?c=3D&pl=3D1&eid=3D6436082875&tid=3D4374&mi=
+d=3D77394eda-542c-4606-9eab-f968fa494e6e&mkt=3Den-US&isc=3Dgdbb4374&e=3Df=
+febceybdjlfsbogubmedaujajkgshteegveahrbmbffegngkgfaafigvcdggjqb' width=3D=
+'1' height=3D'1' style=3D'margin:0 !important; padding:0 !important; bord=
+er:0 !important; height:1px !important; width:1px !important; display:non=
+e !important; visibility:hidden !important;' /><img id=3D'_two50_img' src=
+=3D'http://50analytics.secureserver.net/ea/C5HKnqoXEQ/?e=3D77394eda-542c-=
+4606-9eab-f968fa494e6e@josemoranurena.tech&c=3Dgdbb4374&LocId=3Den-US' wi=
+dth=3D'1' height=3D'1' style=3D'margin:0 !important; padding:0 !important=
+; border:0 !important; height:1px !important; width:1px !important; displ=
+ay:none !important; visibility:hidden !important;' />=0D
+<center style=3D"width:100%;table-layout:fixed;-webkit-text-size-adjust:1=
+00%;-ms-text-size-adjust:100%;" >=0D
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D"#f5f=
+5f5" style=3D"text-align: center;">=0D
+<tr>=0D
+<td>=0D
+=0D
+<!-- LOGO - PHONE ONLY -->=0D
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bg=
+color=3D"#f5f5f5">=0D
+     <tr>=0D
+        <td style=3D"padding-bottom: 15px;" bgcolor=3D"#f5f5f5">=0D
+           <div  style=3D"max-width:600px;margin-top:0;margin-bottom:0;ma=
+rgin-right:auto;margin-left:auto; padding-left:20px; padding-right:20px;"=
+ >=0D
+              <!--[if (gte mso 9)|(IE)]>=0D
+              <table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" align=3D"center">=0D
+                 <tr>=0D
+                    <td style=3D"padding-top:0;padding-bottom:0;padding-r=
+ight:0;padding-left:0;" >=0D
+                       <![endif]-->=0D
+                       <table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" align=3D"center" width=3D"100%" style=3D"font-family:sans-serif;color=
+:#111;">=0D
+                          <tr>=0D
+                             <td align=3D"center" class=3D"stretch" style=
+=3D"padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">=0D
+                                <table width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" class=3D"mobiletextalign" align=3D"left">=0D=
 
---Apple-Mail=_19304FBB-9F19-4BDF-B2CA-C3CA28540C90--
+                                   <tr>=0D
+                                      <td class=3D"mobiletextalign" style=
+=3D"padding-top:0;padding-bottom:0;padding-right:0;padding-left:0px;">=0D=
+
+                                      	<table cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" class=3D"mobiletextalign" align=3D"left">=0D
+                                      	<tr>=0D
+                                      	<td aclass=3D"mobiletextalign" sty=
+le=3D"padding-top:0;padding-bottom:0;padding-right:0;padding-left:0px;">=0D=
+
+                                         <a href=3D"https://click.godaddy=
+=2Ecom/email/jHyepS7IfSeGcWpDJ6r39/?currencyId=3DUSD&eid=3Docp.email.transa=
+ctional/4374.LayoutSimple/Banner/LogoGDOnly.link.click&marketId=3Den-US&r=
+edir=3Dhttps%3A%2F%2Fwww.godaddy.com%3Fisc%3Dgdbb4374%26utm_source%3Dgdoc=
+p%26utm_medium%3Demail%26utm_campaign%3Den-US_other_email-nonrevenue_base=
+_gd%26utm_content%3D240826_4374_Engagement_Other_Service_Customer-Service=
+_gdbb4374_jHyepS7IfSeGcWpDJ6r39"><img class=3D"stretch-img" src=3D"https:=
+//p3pprd001.cloudstorage.secureserver.net/cdn/Image/Email/All/976dd421-fe=
+db-4c69-b57c-54894570d9ce/godaddy-logo-icon-300x90.png" width=3D"150" hei=
+ght=3D"45" border=3D"0" alt=3D"GoDaddy" style=3D"display:block; color:#11=
+1111; font-family:Arial, sans-serif; font-size:12px;" /></a>=0D
+                                         </td>=0D
+                                         </tr>=0D
+                                         </table>=0D
+                                      </td>=0D
+                                   </tr>=0D
+                                </table>=0D
+                             </td>=0D
+                          </tr>=0D
+                       </table>=0D
+                       <!--[if (gte mso 9)|(IE)]>=0D
+                    </td>=0D
+                 </tr>=0D
+              </table>=0D
+              <![endif]-->=0D
+           </div>=0D
+        </td>=0D
+     </tr>=0D
+  </table>=0D
+=0D
+<!-- BODY COPY -->=0D
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#f5f5f5">=0D
+    <tr>=0D
+	<td bgcolor=3D"#f5f5f5" style=3D"background-color:#f5f5f5;padding-top:0;=
+padding-right:0;padding-left:0;padding-bottom:0;">=0D
+		<div style=3D"max-width:600px;margin-top:0;margin-bottom:0;margin-right=
+:auto;margin-left:auto; padding-left:20px; padding-right:20px;">=0D
+			<!--[if (gte mso 9)|(IE)]>=0D
+			<table width=3D"600" align=3D"center" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0">=0D
+			<tr>=0D
+			<td style=3D"padding-top:0;padding-bottom:0;padding-right:0;padding-le=
+ft:0;" >=0D
+			<![endif]-->=0D
+<table bgcolor=3D"#fff" width=3D"100%" align=3D"center" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"font-family:sans-serif;color:#11=
+1;">=0D
+	<tr>=0D
+	<td dir=3D"ltr" bgcolor=3D"#fff" align=3D"left" style=3D"padding-top:40p=
+x;padding-bottom:0;padding-right:40px;padding-left:40px;text-align:left;b=
+ackground-color:#fff;font-family:'gdsherpa', Helvetica, Arial, sans-serif=
+;">=0D
+=0D
+		<p style=3D"Margin-top:0px;Margin-bottom:0px;font-family:'gdsherpa', He=
+lvetica, Arial, sans-serif;font-size:14px; line-height:24px;" >=0D
+		=0D
+<p>Dear Jose,</p><p><br></p><p>As this transfer was done by a former empl=
+oyee, this qualifies as a domain dispute, not a transfer dispute. </p><p>=
+<br></p><p><span style=3D"color: windowtext;">Any dispute over the use of=
+ a domain name or other products registered through us will need to be se=
+nt either to the registrant (click the =E2=80=9CContact Domain Holder=E2=80=
+=9D link at </span><a href=3D"https://www.godaddy.com/whois" rel=3D"noope=
+ner noreferrer" target=3D"_blank" style=3D"color: rgb(5, 99, 193);">https=
+://www.godaddy.com/whois</a><span style=3D"color: windowtext;">) or filed=
+ through an approved arbitration provider or the court system.&nbsp;</spa=
+n></p><p><span style=3D"color: windowtext;">&nbsp;</span></p><p><span sty=
+le=3D"color: windowtext;">It is never necessary to name GoDaddy in a disp=
+ute. We will work to implement any decision issued by an approved arbitra=
+tion forum or a court of competent jurisdiction that directs GoDaddy to t=
+ake specific action(s).&nbsp;</span></p><p><span style=3D"color: windowte=
+xt;">&nbsp;</span></p><p><span style=3D"color: windowtext;">More informat=
+ion about how we can assist with legal matters is available in the "Submi=
+tting Court and Other Legal Documents" section at the link below:&nbsp;</=
+span></p><p><span style=3D"color: windowtext;">&nbsp;</span></p><p><a hre=
+f=3D"https://www.godaddy.com/legal/agreements/subpoena-policy" rel=3D"noo=
+pener noreferrer" target=3D"_blank" style=3D"color: rgb(5, 99, 193);">htt=
+ps://www.godaddy.com/legal/agreements/subpoena-policy</a>&nbsp;</p><p><br=
+></p><p>Best, </p><p><br></p><p>Laurie T</p><p>Transfer Disputes</p><p>Go=
+Daddy</p><br>[Incident:501774]=0D
+		</p>=0D
+                        =0D
+	</td>=0D
+	</tr>=0D
+</table>=0D
+            <!--[if (gte mso 9)|(IE)]>=0D
+			</td>=0D
+			</tr>=0D
+			</table>=0D
+			<![endif]-->=0D
+		</div>=0D
+	</td>=0D
+	</tr>=0D
+</table>=0D
+=0D
+<!--40px WHITE SPACER -->=0D
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#f5f5f5">=0D
+<tr><td bgcolor=3D"#f5f5f5" style=3D"padding-top:0px; padding-bottom:0px;=
+">=0D
+<div style=3D"max-width:600px;margin-top:0;margin-bottom:0;margin-right:a=
+uto;margin-left:auto; padding-left:20px; padding-right:20px;" >=0D
+<!--[if (gte mso 9)|(IE)]>=0D
+<table width=3D"600" align=3D"center" style=3D"border-spacing:0;font-fami=
+ly:sans-serif;color:#FFFFFF;" >=0D
+<tr>=0D
+<td style=3D"padding-top:0;padding-bottom:0;padding-right:0;padding-left:=
+0;" >=0D
+<![endif]-->=0D
+<table  align=3D"center" style=3D"border-spacing:0;font-family:sans-serif=
+;color:#FFFFFF;Margin:0 auto;width:100%;max-width:600px;" >=0D
+ <tr>=0D
+<td style=3D"padding-top:0;padding-bottom:0;padding-right:0;padding-left:=
+0;" >=0D
+        <table width=3D"100%" style=3D"border-spacing:0;font-family:sans-=
+serif;color:#FFFFFF;" >=0D
+            <tr>=0D
+                <td  style=3D"padding-top:40px;padding-bottom:0px;padding=
+-left:40px;padding-right:40px;background-color:#ffffff;width:100%;text-al=
+ign:left;" >=0D
+                    <p style=3D"Margin-top:0px; line-height:0px; Margin-b=
+ottom:0px;font-size:4px;" >&nbsp;</p>=0D
+                </td>=0D
+            </tr>=0D
+        </table>=0D
+    </td>=0D
+</tr>=0D
+</table>=0D
+<!--[if (gte mso 9)|(IE)]>=0D
+</td>=0D
+</tr>=0D
+</table>=0D
+<![endif]-->=0D
+        </div>=0D
+        </td>=0D
+        </tr>=0D
+        </table>=0D
+=0D
+<!-- DISCLAIMERS -->=0D
+  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#f5f5f5">=0D
+     <tr>=0D
+        <td bgcolor=3D"#f5f5f5" style=3D"padding-top:0px; padding-bottom:=
+0px;">=0D
+           <div  style=3D"max-width:600px;margin-top:0;margin-bottom:0;ma=
+rgin-right:auto;margin-left:auto; padding-left:20px; padding-right:20px;"=
+ >=0D
+              <!--[if (gte mso 9)|(IE)]>=0D
+              <table width=3D"600" align=3D"center" style=3D"border-spaci=
+ng:0;font-family:sans-serif;color:#111;" >=0D
+                 <tr>=0D
+                    <td style=3D"padding-top:0;padding-bottom:0;padding-r=
+ight:0;padding-left:0;" >=0D
+                       <![endif]-->=0D
+                       <table bgcolor=3D"#f5f5f5" align=3D"center" style=3D=
+"border-spacing:0;font-family:sans-serif;color:#111;margin:0 auto;width:1=
+00%;max-width:600px;" >=0D
+                          <tr>=0D
+                             <td style=3D"padding-top:0;padding-bottom:0;=
+padding-right:0;padding-left:0;" >=0D
+                                <table width=3D"100%" style=3D"border-spa=
+cing:0;font-family:sans-serif;color:#111;" >=0D
+                                   <tr>=0D
+                                      <td  style=3D"padding-top:40px;padd=
+ing-bottom:0px;padding-left:40px;padding-right:40px;background-color:#f5f=
+5f5;width:100%;text-align:left;" >=0D
+                                         <p style=3D"margin-top:0px; line=
+-height:0px; margin-bottom:0px;font-size:4px;" >&nbsp;</p>=0D
+                                      </td>=0D
+                                   </tr>=0D
+                                </table>=0D
+                             </td>=0D
+                          </tr>=0D
+                       </table>=0D
+                       <!--[if (gte mso 9)|(IE)]>=0D
+                    </td>=0D
+                 </tr>=0D
+              </table>=0D
+              <![endif]-->=0D
+           </div>=0D
+        </td>=0D
+     </tr>=0D
+  </table>=0D
+  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#f5f5f5">=0D
+     <tr>=0D
+        <td bgcolor=3D"#f5f5f5" style=3D"padding-top:0px; padding-bottom:=
+0px;">=0D
+           <div  style=3D"max-width:600px;margin-top:0;margin-bottom:0;ma=
+rgin-right:auto;margin-left:auto; padding-left:20px; padding-right:20px;"=
+ >=0D
+              <!--[if (gte mso 9)|(IE)]>=0D
+              <table width=3D"600" align=3D"center" style=3D"border-spaci=
+ng:0;font-family:sans-serif;color:#111;" >=0D
+                 <tr>=0D
+                    <td style=3D"padding-top:0;padding-bottom:0;padding-r=
+ight:0;padding-left:0;" >=0D
+                       <![endif]-->=0D
+                       <table bgcolor=3D"#f5f5f5" align=3D"center" style=3D=
+"border-spacing:0;font-family:sans-serif;color:#111;margin:0 auto;width:1=
+00%;max-width:600px;" >=0D
+                          <tr>=0D
+                             <td style=3D"padding-top:0;padding-bottom:0;=
+padding-right:0;padding-left:0;" >=0D
+                                <table width=3D"100%" style=3D"border-spa=
+cing:0;font-family:sans-serif;color:#111;" >=0D
+                                   <tr>=0D
+                                      <td  style=3D"padding-top:40px;padd=
+ing-bottom:0px;padding-left:40px;padding-right:40px;background-color:#f5f=
+5f5;width:100%;text-align:left;" >=0D
+                                         <p style=3D"margin-top:0px; line=
+-height:0px; margin-bottom:0px;font-size:4px;" >&nbsp;</p>=0D
+                                      </td>=0D
+                                   </tr>=0D
+                                </table>=0D
+                             </td>=0D
+                          </tr>=0D
+                       </table>=0D
+                       <!--[if (gte mso 9)|(IE)]>=0D
+                    </td>=0D
+                 </tr>=0D
+              </table>=0D
+              <![endif]-->=0D
+           </div>=0D
+        </td>=0D
+     </tr>=0D
+  </table>=0D
+=0D
+<!-- COPYRIGHT -->=0D
+  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#f5f5f5">=0D
+     <tr>=0D
+        <td bgcolor=3D"#f5f5f5" style=3D"padding-top:0px; padding-bottom:=
+0px;">=0D
+           <div  style=3D"max-width:600px;margin-top:0;margin-bottom:0;ma=
+rgin-right:auto;margin-left:auto; padding-left:20px; padding-right:20px;"=
+ >=0D
+              <!--[if (gte mso 9)|(IE)]>=0D
+              <table width=3D"600" align=3D"center" style=3D"border-spaci=
+ng:0;font-family:sans-serif;color:#767676;" >=0D
+                 <tr>=0D
+                    <td style=3D"padding-top:0;padding-bottom:0;padding-r=
+ight:0;padding-left:0;" >=0D
+                       <![endif]-->=0D
+                       <table  align=3D"center" style=3D"border-spacing:0=
+;font-family:sans-serif;color:#767676;margin:0 auto;width:100%;max-width:=
+600px;" >=0D
+                          <tr>=0D
+                             <td style=3D"padding-top:0;padding-bottom:0;=
+padding-right:0;padding-left:0;" >=0D
+                                <table width=3D"100%" style=3D"border-spa=
+cing:0;font-family:sans-serif;color:#767676;" >=0D
+                                   <tr>=0D
+                                      <td dir=3D"ltr" style=3D"padding-to=
+p:0px;padding-bottom:15px;padding-left:0px;padding-right:0px;background-c=
+olor:#f5f5f5;width:100%;text-align:left;" >=0D
+                                         <p class=3D"footer" style=3D"mar=
+gin-bottom:0px;margin-top:0px;font-size:12px; line-height:22px;" >Copyrig=
+ht &copy; 1999-2024 GoDaddy Operating Company, LLC. 100 S Mill Ave, Suite=
+ 1600, Tempe, AZ 85281 USA. All rights reserved.</p>=0D
+                                      </td>=0D
+                                   </tr>=0D
+                                </table>=0D
+                             </td>=0D
+                          </tr>=0D
+                       </table>=0D
+                       <!--[if (gte mso 9)|(IE)]>=0D
+                    </td>=0D
+                 </tr>=0D
+              </table>=0D
+              <![endif]-->=0D
+           </div>=0D
+        </td>=0D
+     </tr>=0D
+  </table>=0D
+=0D
+<!-- END -->=0D
+</td>=0D
+</tr>=0D
+</table>=0D
+  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#f5f5f5">=0D
+     <tr>=0D
+        <td bgcolor=3D"#f5f5f5" style=3D"padding-top:0px; padding-bottom:=
+0px;">=0D
+           <div  style=3D"max-width:600px;margin-top:0;margin-bottom:0;ma=
+rgin-right:auto;margin-left:auto; padding-left:20px; padding-right:20px;"=
+ >=0D
+              <!--[if (gte mso 9)|(IE)]>=0D
+              <table width=3D"600" align=3D"center" style=3D"border-spaci=
+ng:0;font-family:sans-serif;color:#111;" >=0D
+                 <tr>=0D
+                    <td style=3D"padding-top:0;padding-bottom:0;padding-r=
+ight:0;padding-left:0;" >=0D
+                       <![endif]-->=0D
+                       <table bgcolor=3D"#f5f5f5" align=3D"center" style=3D=
+"border-spacing:0;font-family:sans-serif;color:#111;margin:0 auto;width:1=
+00%;max-width:600px;" >=0D
+                          <tr>=0D
+                             <td style=3D"padding-top:0;padding-bottom:0;=
+padding-right:0;padding-left:0;" >=0D
+                                <table width=3D"100%" style=3D"border-spa=
+cing:0;font-family:sans-serif;color:#111;" >=0D
+                                   <tr>=0D
+                                      <td  style=3D"padding-top:20px;padd=
+ing-bottom:0px;padding-left:40px;padding-right:40px;background-color:#f5f=
+5f5;width:100%;text-align:left;" >=0D
+                                         <p style=3D"margin-top:0px; line=
+-height:0px; margin-bottom:0px;font-size:4px;" >&nbsp;</p>=0D
+                                      </td>=0D
+                                   </tr>=0D
+                                </table>=0D
+                             </td>=0D
+                          </tr>=0D
+                       </table>=0D
+                       <!--[if (gte mso 9)|(IE)]>=0D
+                    </td>=0D
+                 </tr>=0D
+              </table>=0D
+              <![endif]-->=0D
+           </div>=0D
+        </td>=0D
+     </tr>=0D
+  </table>=0D
+</center>=0D
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#f5f5f5">=0D
+     <tr>=0D
+    <td bgcolor=3D"#f5f5f5" style=3D"padding-top:0px; padding-bottom:0px;=
+">=0D
+       <div style=3D"max-width:600px;margin-top:0;margin-bottom:0;margin-=
+right:auto;margin-left:auto; padding-left:20px; padding-right:20px;">=0D
+          <!--[if (gte mso 9)|(IE)]>=0D
+          <table width=3D"600" align=3D"center" style=3D"border-spacing:0=
+;font-family:sans-serif;color:#767676;" >=0D
+         <tr>=0D
+            <td style=3D"padding-top:0;padding-bottom:0;padding-right:0;p=
+adding-left:0;" >=0D
+               <![endif]-->=0D
+               <table align=3D"center" style=3D"border-spacing:0;font-fam=
+ily:sans-serif;color:#767676;margin:0 auto;width:100%;max-width:600px;">=0D=
+
+              <tr>=0D
+                 <td style=3D"padding-top:0;padding-bottom:0;padding-righ=
+t:0;padding-left:0;">=0D
+                <table width=3D"100%" style=3D"border-spacing:0;font-fami=
+ly:sans-serif;color:#767676;">=0D
+                   <tr>=0D
+                      <td style=3D"padding-top:0px;padding-bottom:15px;pa=
+dding-left:0px;padding-right:0px;background-color:#f5f5f5;width:100%;text=
+-align:right;" align=3D"right">=0D
+                     <p class=3D"footer" style=3D"margin-bottom:0px;margi=
+n-top:0px;font-size:12px; line-height:22px;text-align:right; text-decorat=
+ion: none !important;">6436082875</p>=0D
+                      </td>=0D
+                   </tr>=0D
+                </table>=0D
+                 </td>=0D
+              </tr>=0D
+               </table>=0D
+               <!--[if (gte mso 9)|(IE)]>=0D
+            </td>=0D
+         </tr>=0D
+          </table>=0D
+          <![endif]-->=0D
+       </div>=0D
+    </td>=0D
+     </tr>=0D
+  </table></body>=0D
+</html>=
