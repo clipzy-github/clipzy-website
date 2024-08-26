@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/images/*"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/contracts/*"
+  to = "/"
+  status = 200
