@@ -3,9 +3,3 @@
   to = "/"
   status = 200
   force = true
-
-[[redirects]]
-  from = "/contracts/*"
-  to = "/"
-  status = 200
-  force = true
