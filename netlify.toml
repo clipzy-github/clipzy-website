@@ -1,9 +1,11 @@
 [[redirects]]
   from = "/images/*"
-  to = "/"
+  to = "/#"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/contracts/*"
-  to = "/"
+  to = "/#"
   status = 200
+  force = true
